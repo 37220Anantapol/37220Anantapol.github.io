@@ -1,169 +1,85 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | อนันทพล อุดมผล</title>
+<title>แฟ้มสะสมงานของอนันทพล</title>
 
 <style>
 
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #eeeeee, #d6d6d6);
-    color: #333;
-}
+    font-family: sans-serif;
+    background: linear-gradient(
+        135deg,
+        #f28c28,
+        #f5b36b,
+        #d6d6d6,
+        #666666
+    );
 
-
-/* เมนู */
-nav {
-    background: #333333;
-    padding: 15px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 30px;
+    min-height: 100vh;
 }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 5px;
-    padding: 10px 18px;
-    border-radius: 25px;
-    background: #444444;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background: #f28c28;
-}
-
-
-/* หัวเว็บ */
-.header {
-    background: linear-gradient(135deg, #333333, #555555);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.header h1 {
-    color: #f28c28;
-    font-size: 40px;
-}
-
-.header p {
-    font-size: 19px;
-}
-
-
-/* กล่องเนื้อหา */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 15px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-
-/* การ์ด */
-.project-card {
-    background: white;
-    margin-bottom: 30px;
+.card {
+    background: rgba(255,255,255,0.95);
     padding: 30px;
     border-radius: 25px;
-    border-left: 8px solid #f28c28;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+h1 {
+    color: #555555;
 }
 
-
-/* หัวข้อ */
-.project-card h2 {
+h2 {
     color: #f28c28;
-    margin-top: 0;
 }
 
-.project-card p {
-    color: #555;
+p {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
+.profile {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f28c28;
+    margin-bottom: 15px;
+}
 
-/* รูปผลงาน */
-.project-img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto;
+.project {
+    background: #f5f5f5;
+    padding: 15px;
+    margin: 20px 0;
     border-radius: 15px;
-    border: 5px solid #eeeeee;
-    transition: 0.3s;
+    text-align: left;
+    border-left: 6px solid #f28c28;
 }
 
-.project-img:hover {
-    transform: scale(1.02);
-}
-
-
-/* กล่องข้อมูล */
-.info-box {
-    background: #f4f4f4;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.info-box strong {
-    color: #f28c28;
-}
-
-
-/* ปุ่มกลับ */
 .btn {
-    display: block;
-    width: fit-content;
-    margin: 40px auto;
-    padding: 14px 30px;
-    background: #f28c28;
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #f28c28,
+        #666666
+    );
+
     color: white;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #333333;
-}
-
-
-/* มือถือ */
-@media (max-width: 600px) {
-
-    .header h1 {
-        font-size: 30px;
-    }
-
-    .project-card {
-        padding: 22px;
-    }
-
-    .project-card p {
-        font-size: 16px;
-    }
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 </style>
@@ -171,154 +87,88 @@ nav a:hover {
 
 <body>
 
-
-<!-- เมนู -->
-<nav>
-
-    <a href="index.html">
-        🏠 หน้าหลัก
-    </a>
-
-    <a href="portfolio.html">
-        📁 Portfolio
-    </a>
-
-</nav>
-
-
-<!-- หัวเว็บ -->
-<section class="header">
-
-    <h1>
-        📁 แฟ้มสะสมผลงาน
-    </h1>
-
-    <p>
-        Portfolio ของ อนันทพล อุดมผล
-    </p>
-
-</section>
-
-
 <div class="container">
 
+<div class="card">
 
-<!-- ABOUT ME -->
+<h1>📚 แฟ้มสะสมงานของผม 📚</h1>
 
-<div class="project-card">
+<img
+    src="IMG_0013.jpeg"
+    alt="รูปโปรไฟล์ของอนันทพล อุดมผล"
+    class="profile"
+>
 
-    <h2>👤 About Me</h2>
+<p>
+สวัสดีครับ ผมชื่อ
+<strong>อนันทพล อุดมผล</strong>
+</p>
 
-    <p>
-        ผมชื่อ <strong>อนันทพล อุดมผล</strong>
-        เป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
-        มีความสนใจด้านวิศวกรรมโยธา
-    </p>
+<p>
+🎓 กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/5
+</p>
 
-    <div class="info-box">
+<p>
+👷‍♂️ สนใจด้านวิศวกรรมโยธา
+</p>
 
-        <p>🎓 ระดับการศึกษา : มัธยมศึกษาปีที่ 6</p>
-
-        <p>📐 ความสนใจ :
-        วิศวกรรมโยธา</p>
-
-        <p>💡 ความสนใจเพิ่มเติม :
-        การออกแบบ การก่อสร้าง
-        และเทคโนโลยี</p>
-
-    </div>
-
-</div>
-
-
-<!-- ผลงานที่ 1 -->
-
-<div class="project-card">
-
-    <h2>🏗️ ผลงานที่ 1 : โครงงาน / กิจกรรม</h2>
-
-    <p>
-        รายละเอียดผลงานของผมสามารถใส่ตรงนี้ได้
-        เช่น โครงงานที่เคยทำ กิจกรรมที่เคยเข้าร่วม
-        หรือสิ่งที่เกี่ยวข้องกับสายวิศวกรรม
-    </p>
+<p>
+🎯 เป้าหมายในอนาคต คือการศึกษาต่อด้านวิศวกรรมโยธา
+และสร้างสิ่งปลูกสร้างที่มีประโยชน์ต่อผู้คน
+</p>
 
 
-    <!-- ใส่รูปผลงานตรงนี้ -->
-
-    <img src="work1.jpg"
-         alt="ผลงานที่ 1"
-         class="project-img">
+<h2>🏗️ ผลงานและกิจกรรม</h2>
 
 
-    <div class="info-box">
+<div class="project">
 
-        <p>
-            <strong>สิ่งที่ได้รับ:</strong>
-            ได้ฝึกการทำงานร่วมกับผู้อื่น
-            การวางแผน และการแก้ปัญหา
-        </p>
+<h3>🔬 1. โครงงานและผลงานด้านวิทยาศาสตร์</h3>
 
-    </div>
+<p>
+ผลงานและกิจกรรมที่เกี่ยวข้องกับการเรียนรู้
+การคำนวณ การทดลอง และการแก้ไขปัญหา
+ซึ่งสามารถนำไปต่อยอดในการศึกษาด้านวิศวกรรมได้
+</p>
 
 </div>
 
 
-<!-- ผลงานที่ 2 -->
+<div class="project">
 
-<div class="project-card">
+<h3>📜 2. กิจกรรมและเกียรติบัตร</h3>
 
-    <h2>🏆 ผลงานที่ 2 : รางวัลและเกียรติบัตร</h2>
-
-    <p>
-        ใส่รายละเอียดเกี่ยวกับรางวัล
-        เกียรติบัตร หรือการแข่งขันที่เคยได้รับ
-    </p>
-
-
-    <!-- ใส่รูปเกียรติบัตรตรงนี้ -->
-
-    <img src="certificate.jpg"
-         alt="เกียรติบัตร"
-         class="project-img">
-
-
-    <div class="info-box">
-
-        <p>
-            <strong>สิ่งที่ได้รับ:</strong>
-            ประสบการณ์ ความรับผิดชอบ
-            และการพัฒนาตนเอง
-        </p>
-
-    </div>
+<p>
+รวบรวมกิจกรรมที่ได้เข้าร่วม รวมถึงเกียรติบัตร
+และประสบการณ์ต่าง ๆ ที่ได้รับระหว่างการศึกษา
+</p>
 
 </div>
 
 
-<!-- เป้าหมาย -->
+<div class="project">
 
-<div class="project-card">
+<h3>🏗️ 3. ความสนใจด้านวิศวกรรมโยธา</h3>
 
-    <h2>🎯 เป้าหมายของผม</h2>
-
-    <p>
-        ผมตั้งใจศึกษาต่อในด้านวิศวกรรมโยธา
-        และต้องการพัฒนาความรู้และทักษะ
-        เพื่อนำไปใช้ในการออกแบบและสร้าง
-        สิ่งปลูกสร้างที่มีประโยชน์ต่อสังคม
-    </p>
+<p>
+ผมมีความสนใจในการออกแบบและก่อสร้างสิ่งปลูกสร้าง
+และอยากสร้างผลงานที่สามารถมองเห็นได้จริง
+เพื่อเป็นสิ่งที่แสดงให้เห็นถึงความตั้งใจและความสามารถของผม
+</p>
 
 </div>
 
-
-<!-- ปิดท้าย -->
 
 <a href="index.html" class="btn">
-    🏠 กลับหน้าแรก
+🏠 กลับหน้าแรก
 </a>
 
+</div>
 
+</div>
+
+</body>
+</html>
 </div>
 
 </body>
