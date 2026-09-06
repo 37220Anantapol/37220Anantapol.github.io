@@ -1,1474 +1,1604 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Portfolio - นายอนันทพล อุดมผล</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
 
-<title>Portfolio - อนันทพล อุดมผล</title>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* =========================
-   ตั้งค่าพื้นฐาน
-========================= */
+        body {
+            font-family:
+                Arial,
+                "Noto Sans Thai",
+                "Tahoma",
+                sans-serif;
 
-* {
-    box-sizing: border-box;
-}
+            color: #444;
 
-html {
-    scroll-behavior: smooth;
-}
+            line-height: 1.8;
 
-body {
-    margin: 0;
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28 0%,
+                    #f5a65b 25%,
+                    #c9c9c9 55%,
+                    #777777 80%,
+                    #444444 100%
+                );
 
-    font-family:
-        Arial,
-        "Noto Sans Thai",
-        "Tahoma",
-        sans-serif;
+            background-attachment: fixed;
+        }
 
-    color: #555555;
 
-    background: linear-gradient(
-        135deg,
-        #f28c28,
-        #f5b36b,
-        #d6d6d6,
-        #666666
-    );
+        /* =========================
+           Navigation
+        ========================= */
 
-    line-height: 1.7;
-}
+        nav {
 
+            background:
+                linear-gradient(
+                    90deg,
+                    #e87500,
+                    #f28c28,
+                    #999999,
+                    #555555
+                );
 
-/* =========================
-   เมนูด้านบน
-========================= */
+            padding: 15px 20px;
 
-nav {
+            position: sticky;
 
-    position: sticky;
-    top: 0;
+            top: 0;
 
-    z-index: 1000;
+            z-index: 1000;
 
-    background: rgba(255,255,255,0.97);
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.25);
+        }
 
-    text-align: center;
 
-    padding: 15px 10px;
+        nav ul {
 
-    border-bottom: 5px solid #f28c28;
+            list-style: none;
 
-    box-shadow:
-        0 3px 12px rgba(0,0,0,0.15);
-}
+            display: flex;
 
-nav a {
+            justify-content: center;
 
-    display: inline-block;
+            align-items: center;
 
-    color: #e67e22;
+            flex-wrap: wrap;
 
-    text-decoration: none;
+            gap: 10px;
+        }
 
-    font-weight: bold;
 
-    padding: 10px 16px;
+        nav ul li a {
 
-    margin: 5px;
+            text-decoration: none;
 
-    border-radius: 25px;
+            color: white;
 
-    border: 2px solid #f5b36b;
+            font-weight: bold;
 
-    background: white;
+            padding: 9px 16px;
 
-    transition: 0.3s;
-}
+            border-radius: 25px;
 
-nav a:hover {
+            transition: 0.3s;
 
-    background: #f28c28;
+            border: 1px solid rgba(255,255,255,0.4);
 
-    color: white;
+            background:
+                rgba(255,255,255,0.12);
 
-    transform: translateY(-2px);
-}
+            box-shadow:
+                0 2px 6px rgba(0,0,0,0.15);
+        }
 
 
-/* =========================
-   ส่วนหัว
-========================= */
+        nav ul li a:hover {
 
-.header {
+            background: white;
 
-    text-align: center;
+            color: #e87500;
 
-    padding: 55px 15px;
+            transform:
+                translateY(-3px);
 
-    background: linear-gradient(
-        90deg,
-        #f28c28,
-        #f5b36b,
-        #888888
-    );
+            box-shadow:
+                0 5px 12px rgba(0,0,0,0.2);
+        }
 
-    color: white;
 
-    box-shadow:
-        0 5px 15px rgba(0,0,0,0.15);
-}
+        /* =========================
+           Header
+        ========================= */
 
-.header h1 {
+        header {
 
-    font-size: 35px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #d98a3a,
+                    #777777,
+                    #444444
+                );
 
-    margin: 10px;
+            color: white;
 
-    text-shadow:
-        2px 2px 5px rgba(0,0,0,0.25);
-}
+            text-align: center;
 
-.header p {
+            padding: 70px 20px;
 
-    font-size: 21px;
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.25);
 
-    margin: 8px;
-}
+            border-bottom:
+                5px solid #f5a65b;
+        }
 
 
-/* =========================
-   กล่องหลัก
-========================= */
+        header h1 {
 
-.container {
+            font-size: 2.5rem;
 
-    max-width: 900px;
+            margin-bottom: 12px;
 
-    margin: 35px auto;
+            text-shadow:
+                2px 3px 6px rgba(0,0,0,0.35);
+        }
 
-    padding: 0 15px;
-}
 
-.card {
+        header p {
 
-    background: rgba(255,255,255,0.97);
+            font-size: 1.15rem;
 
-    border-radius: 30px;
+            margin: 5px;
+        }
 
-    padding: 35px;
 
-    margin-bottom: 35px;
+        /* =========================
+           Container
+        ========================= */
 
-    border: 4px solid #f5b36b;
+        .container {
 
-    box-shadow:
+            width: 90%;
 
-        0 0 0 5px #d6d6d6,
+            max-width: 1100px;
 
-        0 5px 15px rgba(0,0,0,0.15);
-}
+            margin: 40px auto;
+        }
 
 
-/* =========================
-   หัวข้อ
-========================= */
+        /* =========================
+           Section
+        ========================= */
 
-.card h2 {
+        section {
 
-    text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.98),
+                    rgba(245,245,245,0.96)
+                );
 
-    color: #e67e22;
+            margin-bottom: 35px;
 
-    font-size: 30px;
+            padding: 32px;
 
-    margin-top: 0;
+            border-radius: 22px;
 
-    margin-bottom: 25px;
-}
+            border:
+                2px solid rgba(242,140,40,0.45);
 
-.card h3 {
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.15);
+        }
 
-    color: #e67e22;
-}
 
+        section h2 {
 
-/* =========================
-   ข้อความ
-========================= */
+            color: #df7200;
 
-.card p {
+            margin-bottom: 22px;
 
-    font-size: 18px;
+            border-left:
+                7px solid #f28c28;
 
-    line-height: 1.9;
+            padding-left: 14px;
 
-    margin-top: 10px;
+            text-shadow:
+                1px 1px 1px rgba(0,0,0,0.08);
+        }
 
-    margin-bottom: 15px;
-}
 
+        /* =========================
+           Profile
+        ========================= */
 
-/* =========================
-   รูปโปรไฟล์
-========================= */
+        .profile {
 
-.profile {
+            display: flex;
 
-    display: block;
+            align-items: center;
 
-    width: 210px;
+            gap: 35px;
 
-    height: 210px;
+            flex-wrap: wrap;
+        }
 
-    object-fit: cover;
 
-    border-radius: 50%;
+        .profile img {
 
-    border: 7px solid #f28c28;
+            width: 220px;
 
-    margin: 20px auto;
+            height: 220px;
 
-    box-shadow:
+            object-fit: cover;
 
-        0 0 0 7px #d6d6d6,
+            border-radius: 50%;
 
-        0 5px 15px rgba(0,0,0,0.15);
-}
+            border:
+                7px solid #f28c28;
 
+            display: block;
 
-/* =========================
-   ข้อมูลส่วนตัว
-========================= */
+            margin: auto;
 
-.info {
+            box-shadow:
+                0 0 0 6px #999999,
+                0 7px 18px rgba(0,0,0,0.2);
+        }
 
-    background: linear-gradient(
-        135deg,
-        #fff5e8,
-        #eeeeee
-    );
 
-    border: 3px solid #f5b36b;
+        .profile-info {
 
-    border-radius: 25px;
+            flex: 1;
 
-    padding: 25px;
-}
+            min-width: 280px;
 
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7ed,
+                    #eeeeee
+                );
 
-/* =========================
-   ช่องทางติดต่อ
-========================= */
+            padding: 20px;
 
-.contact {
+            border-radius: 18px;
 
-    margin-top: 25px;
+            border-left:
+                6px solid #f28c28;
+        }
 
-    background: #f7f7f7;
 
-    border-left: 8px solid #f28c28;
+        .profile-info p {
 
-    border-radius: 15px;
+            margin-bottom: 8px;
+        }
 
-    padding: 20px;
-}
 
-.contact h3 {
+        /* =========================
+           Info boxes
+        ========================= */
 
-    margin-top: 0;
-}
+        .info-box {
 
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff4e5,
+                    #eeeeee
+                );
 
-/* =========================
-   มหาวิทยาลัย
-========================= */
+            padding: 22px;
 
-.university {
+            border-radius: 18px;
 
-    text-align: center;
+            margin-top: 20px;
 
-    background: linear-gradient(
-        135deg,
-        #fff3e0,
-        #eeeeee
-    );
+            border-left:
+                6px solid #f28c28;
 
-    border: 4px solid #f28c28;
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.08);
+        }
 
-    border-radius: 25px;
 
-    padding: 25px;
-}
+        .info-box h3 {
 
-.university h3 {
+            color: #df7200;
 
-    font-size: 26px;
+            margin-bottom: 8px;
+        }
 
-    color: #e67e22;
 
-    margin-top: 0;
-}
+        /* =========================
+           Contact
+        ========================= */
 
+        .contact {
 
-/* =========================
-   เหตุผล
-========================= */
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8f8f8,
+                    #e6e6e6
+                );
 
-.reason {
+            padding: 22px;
 
-    background: #fafafa;
+            border-radius: 18px;
 
-    border-left: 8px solid #f28c28;
+            border-left:
+                6px solid #777777;
 
-    border-radius: 15px;
+            margin-top: 20px;
+        }
 
-    padding: 20px;
 
-    margin-top: 25px;
-}
+        .contact h3 {
 
+            color: #df7200;
 
-/* =========================
-   เป้าหมาย
-========================= */
+            margin-bottom: 10px;
+        }
 
-.goal {
 
-    background: linear-gradient(
-        135deg,
-        #eeeeee,
-        #fff5e8
-    );
+        .contact p {
 
-    border: 3px solid #999999;
+            margin-bottom: 8px;
+        }
 
-    border-radius: 20px;
 
-    padding: 20px;
+        /* =========================
+           University
+        ========================= */
 
-    margin-top: 25px;
-}
+        .university {
 
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff4e5,
+                    #eeeeee,
+                    #d2d2d2
+                );
 
-/* =========================
-   ผลงาน
-========================= */
+            border:
+                3px solid #f28c28;
 
-.project {
+            border-radius: 20px;
 
-    background: linear-gradient(
-        135deg,
-        #fff8f0,
-        #eeeeee
-    );
+            padding: 25px;
 
-    border: 4px solid #f5b36b;
+            box-shadow:
+                inset 0 0 20px rgba(0,0,0,0.04);
+        }
 
-    border-radius: 25px;
 
-    padding: 25px;
+        .university h3 {
 
-    margin: 25px 0;
+            color: #df7200;
 
-    overflow: hidden;
-}
+            margin-bottom: 10px;
+        }
 
-.project h3 {
 
-    font-size: 23px;
+        /* =========================
+           Projects
+        ========================= */
 
-    color: #e67e22;
+        .project {
 
-    margin-top: 0;
-}
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8f0,
+                    #eeeeee,
+                    #d9d9d9
+                );
 
+            border:
+                2px solid #f5a65b;
 
-/* =========================
-   ช่องรูปผลงาน
-========================= */
+            border-radius: 20px;
 
-.image-box {
+            padding: 25px;
 
-    width: 100%;
+            margin-bottom: 28px;
 
-    max-width: 650px;
+            transition: 0.3s;
 
-    margin: 25px auto;
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.08);
+        }
 
-    border: 4px solid #f28c28;
 
-    border-radius: 20px;
+        .project:hover {
 
-    background: #f7f7f7;
+            transform:
+                translateY(-5px);
 
-    display: flex;
+            box-shadow:
+                0 10px 22px rgba(0,0,0,0.16);
 
-    align-items: center;
+            border-color:
+                #f28c28;
+        }
 
-    justify-content: center;
 
-    overflow: hidden;
+        .project h3 {
 
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.12);
-}
+            color: #df7200;
 
+            margin-bottom: 15px;
 
-/* =========================
-   รูปผลงาน
-========================= */
+            font-size: 1.3rem;
+        }
 
-.image-box img {
 
-    width: 100%;
+        .project p {
 
-    max-width: 650px;
+            margin-bottom: 10px;
+        }
 
-    height: auto;
 
-    display: block;
+        .project ul {
 
-    object-fit: contain;
+            margin:
+                10px 0 0 25px;
+        }
 
-    border-radius: 15px;
-}
 
+        .project li {
 
-/* =========================
-   ทักษะ
-========================= */
+            margin-bottom: 7px;
+        }
 
-.skill {
 
-    background: white;
+        /* =========================
+           Project Images
+        ========================= */
 
-    border-left: 8px solid #999999;
+        .project img {
 
-    border-radius: 15px;
+            width: 100%;
 
-    padding: 20px;
+            max-width: 700px;
 
-    margin-top: 20px;
-}
+            display: block;
 
-.skill h3 {
+            margin: 22px auto;
 
-    color: #e67e22;
+            border-radius: 15px;
 
-    margin-top: 0;
-}
+            border:
+                4px solid #f28c28;
 
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.18);
 
-/* =========================
-   ปุ่ม
-========================= */
+            background:
+                #eeeeee;
 
-.btn {
+            transition: 0.3s;
+        }
 
-    display: inline-block;
 
-    background: linear-gradient(
-        90deg,
-        #f28c28,
-        #666666
-    );
+        .project img:hover {
 
-    color: white;
+            transform:
+                scale(1.015);
 
-    text-decoration: none;
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.22);
+        }
 
-    padding: 13px 25px;
 
-    border-radius: 30px;
+        /* =========================
+           Skills
+        ========================= */
 
-    font-weight: bold;
+        .skills {
 
-    transition: 0.3s;
+            display: flex;
 
-    box-shadow:
-        0 4px 10px rgba(0,0,0,0.2);
-}
+            flex-wrap: wrap;
 
-.btn:hover {
+            gap: 12px;
 
-    transform: translateY(-3px);
+            margin-top: 15px;
+        }
 
-    box-shadow:
-        0 7px 15px rgba(0,0,0,0.25);
-}
 
+        .skill {
 
-/* =========================
-   ขอบคุณ
-========================= */
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #d87512,
+                    #666666
+                );
 
-.thank {
+            color: white;
 
-    text-align: center;
-}
+            padding: 9px 17px;
 
+            border-radius: 22px;
 
-/* =========================
-   เส้นแบ่งเล็ก ๆ
-========================= */
+            font-weight: bold;
 
-.divider {
+            box-shadow:
+                0 3px 8px rgba(0,0,0,0.15);
 
-    width: 80%;
+            transition: 0.3s;
+        }
 
-    height: 3px;
 
-    background: #f5b36b;
+        .skill:hover {
 
-    margin: 25px auto;
+            transform:
+                translateY(-3px);
 
-    border-radius: 10px;
-}
+            box-shadow:
+                0 6px 12px rgba(0,0,0,0.2);
+        }
 
 
-/* =========================
-   โทรศัพท์
-========================= */
+        /* =========================
+           Button
+        ========================= */
 
-@media (max-width: 600px) {
+        .btn {
 
-    nav {
+            display: inline-block;
 
-        padding: 10px 5px;
-    }
+            background:
+                linear-gradient(
+                    90deg,
+                    #f28c28,
+                    #d87512,
+                    #666666
+                );
 
-    nav a {
+            color: white;
 
-        font-size: 14px;
+            text-decoration: none;
 
-        padding: 8px 11px;
+            padding: 13px 27px;
 
-        margin: 3px;
-    }
+            border-radius: 28px;
 
-    .header {
+            font-weight: bold;
 
-        padding: 40px 15px;
-    }
+            transition: 0.3s;
 
-    .header h1 {
+            box-shadow:
+                0 5px 12px rgba(0,0,0,0.2);
+        }
 
-        font-size: 27px;
-    }
 
-    .header p {
+        .btn:hover {
 
-        font-size: 17px;
-    }
+            transform:
+                translateY(-3px)
+                scale(1.03);
 
-    .container {
+            box-shadow:
+                0 8px 18px rgba(0,0,0,0.25);
+        }
 
-        padding: 0 10px;
 
-        margin-top: 25px;
-    }
+        /* =========================
+           Footer
+        ========================= */
 
-    .card {
+        footer {
 
-        padding: 25px 18px;
+            background:
+                linear-gradient(
+                    90deg,
+                    #444444,
+                    #666666,
+                    #d87512,
+                    #f28c28
+                );
 
-        border-radius: 25px;
-    }
+            color: white;
 
-    .card h2 {
+            text-align: center;
 
-        font-size: 25px;
-    }
+            padding: 28px 15px;
 
-    .card p {
+            margin-top: 30px;
 
-        font-size: 16px;
+            box-shadow:
+                0 -5px 15px rgba(0,0,0,0.15);
+        }
 
-        line-height: 1.8;
-    }
 
-    .profile {
+        /* =========================
+           Mobile
+        ========================= */
 
-        width: 180px;
+        @media (max-width: 768px) {
 
-        height: 180px;
-    }
+            header h1 {
 
-    .project {
+                font-size:
+                    1.8rem;
+            }
 
-        padding: 18px;
 
-        border-radius: 20px;
-    }
+            header p {
 
-    .project h3 {
+                font-size:
+                    1rem;
+            }
 
-        font-size: 21px;
-    }
 
-    .image-box {
+            section {
 
-        margin: 20px auto;
+                padding:
+                    20px;
 
-        border-width: 3px;
+                border-radius:
+                    18px;
+            }
 
-        border-radius: 15px;
-    }
 
-    .image-box img {
+            .profile {
 
-        width: 100%;
+                flex-direction:
+                    column;
 
-        height: auto;
-    }
+                text-align:
+                    center;
+            }
 
-    .university {
 
-        padding: 20px 15px;
-    }
+            .profile-info {
 
-    .university h3 {
+                min-width:
+                    100%;
 
-        font-size: 21px;
-    }
+                text-align:
+                    left;
+            }
 
-}
 
+            nav ul {
 
-/* =========================
-   หน้าจอขนาดกลาง
-========================= */
+                gap:
+                    5px;
+            }
 
-@media (min-width: 601px) and (max-width: 900px) {
 
-    .container {
+            nav ul li a {
 
-        padding: 0 20px;
-    }
+                font-size:
+                    14px;
 
-    .card {
+                padding:
+                    7px 10px;
+            }
 
-        padding: 30px;
-    }
 
-}
+            .project {
 
-</style>
+                padding:
+                    18px;
+            }
 
+
+            .project h3 {
+
+                font-size:
+                    1.1rem;
+            }
+
+
+            .project img {
+
+                border-width:
+                    3px;
+            }
+        }
+
+    </style>
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     เมนูด้านบน
-========================= -->
+    <!-- Navigation -->
 
-<nav>
+    <nav>
 
-<a href="index.html">
-🏠 หน้าหลัก
-</a>
+        <ul>
 
-<a href="#preface">
-📖 คำนำ
-</a>
+            <li>
+                <a href="#home">
+                    🏠 หน้าแรก
+                </a>
+            </li>
 
-<a href="#about">
-👤 ประวัติส่วนตัว
-</a>
+            <li>
+                <a href="#preface">
+                    📖 คำนำ
+                </a>
+            </li>
 
-<a href="#university">
-🎓 มหาวิทยาลัย
-</a>
+            <li>
+                <a href="#personal">
+                    👤 ประวัติส่วนตัว
+                </a>
+            </li>
 
-<a href="#portfolio">
-🏆 ผลงาน
-</a>
+            <li>
+                <a href="#university">
+                    🎓 มหาวิทยาลัย
+                </a>
+            </li>
 
-<a href="#thanks">
-📐 ขอบคุณ
-</a>
+            <li>
+                <a href="#portfolio">
+                    🏆 ผลงาน
+                </a>
+            </li>
 
-</nav>
+            <li>
+                <a href="#thanks">
+                    🙏 ขอบคุณ
+                </a>
+            </li>
 
+        </ul>
 
+    </nav>
 
-<!-- =========================
-     ส่วนหัว
-========================= -->
 
-<div class="header">
+    <!-- Header -->
 
-<h1>
-✨🏗️ แฟ้มสะสมผลงาน (Portfolio) 🏗️✨
-</h1>
+    <header id="home">
 
-<p>
-🔶 นายอนันทพล อุดมผล 🔶
-</p>
+        <h1>
+            ✨🏗️ แฟ้มสะสมผลงาน (Portfolio) 🏗️✨
+        </h1>
 
-<p>
-นักเรียนชั้นมัธยมศึกษาปีที่ 6/5
-</p>
+        <p>
+            นายอนันทพล อุดมผล
+        </p>
 
-</div>
+        <p>
+            นักเรียนชั้นมัธยมศึกษาปีที่ 6/5
+        </p>
 
+    </header>
 
 
-<div class="container">
+    <div class="container">
 
 
-<!-- =========================
-     คำนำ
-========================= -->
+        <!-- Preface -->
 
-<div class="card" id="preface">
+        <section id="preface">
 
-<h2>
-📖 คำนำ
-</h2>
+            <h2>
+                📖 คำนำ
+            </h2>
 
-<div class="divider"></div>
+            <p>
 
-<p>
+                แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
+                ประวัติส่วนตัว ความสนใจ ความสามารถ ผลงาน กิจกรรม
+                และประสบการณ์ต่าง ๆ ที่ได้สั่งสมมาตลอดระยะเวลาการศึกษา
 
-แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้
-จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-ประวัติการศึกษา ผลงาน โครงงาน
-และกิจกรรมต่าง ๆ ที่แสดงถึงความสามารถ
-ความสนใจ และความตั้งใจของผม
+            </p>
 
-</p>
 
-<p>
+            <p>
 
-ผมมีความสนใจด้านวิศวกรรมโยธา
-เนื่องจากเป็นศาสตร์ที่เกี่ยวข้องกับ
-การออกแบบ การคำนวณ การก่อสร้าง
-และการสร้างสิ่งปลูกสร้างที่สามารถ
-นำไปใช้ประโยชน์ได้จริง
+                ข้าพเจ้ามีความสนใจในด้านวิศวกรรมศาสตร์
+                โดยเฉพาะสาขาวิศวกรรมโยธา เนื่องจากเป็นสาขาที่เกี่ยวข้องกับ
+                การออกแบบ การก่อสร้าง และการพัฒนาโครงสร้างพื้นฐาน
+                ซึ่งเป็นสิ่งสำคัญต่อการพัฒนาประเทศ
 
-</p>
+            </p>
 
-<p>
 
-ผมหวังเป็นอย่างยิ่งว่า
-แฟ้มสะสมผลงานเล่มนี้จะช่วยให้ผู้อ่าน
-ได้รู้จักตัวตน ความสามารถ
-ความสนใจ และเป้าหมายในการศึกษาต่อ
-ของผมมากยิ่งขึ้น
+            <p>
 
-</p>
+                ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
+                จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสามารถ
+                และความพร้อมในการศึกษาต่อในระดับมหาวิทยาลัย
 
-<p>
+            </p>
 
-นอกจากนี้ ผมยังต้องการพัฒนาตนเอง
-ทั้งด้านความรู้ ทักษะการคิดวิเคราะห์
-การแก้ปัญหา และการทำงานร่วมกับผู้อื่น
-เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อ
-และการทำงานในอนาคต
+        </section>
 
-</p>
 
-<p style="text-align:right;">
-นายอนันทพล อุดมผล
-</p>
+        <!-- Personal -->
 
-</div>
+        <section id="personal">
 
+            <h2>
+                👤 ประวัติส่วนตัว
+            </h2>
 
 
-<!-- =========================
-     ประวัติส่วนตัว
-========================= -->
+            <div class="profile">
 
-<div class="card" id="about">
 
-<h2>
-👤 ประวัติส่วนตัว
-</h2>
+                <div>
 
-<div class="divider"></div>
+                    <img
+                        src="IMG_0013.jpeg"
+                        alt="รูปโปรไฟล์ นายอนันทพล อุดมผล"
+                    >
 
+                </div>
 
-<img
-    src="IMG_0013.jpeg"
-    alt="รูปโปรไฟล์ของอนันทพล อุดมผล"
-    class="profile"
->
 
+                <div class="profile-info">
 
-<div class="info">
 
-<p>
-<strong>ชื่อ-สกุล :</strong>
-นายอนันทพล อุดมผล
-</p>
+                    <p>
 
-<p>
-<strong>ชื่อเล่น :</strong>
-เป๊ก
-</p>
+                        <strong>
+                            ชื่อ :
+                        </strong>
 
-<p>
-<strong>วัน/เดือน/ปีเกิด :</strong>
-28/08/2551
-</p>
+                        นายอนันทพล อุดมผล
 
-<p>
-<strong>อายุ :</strong>
-18 ปี
-</p>
+                    </p>
 
-<p>
-<strong>แผนการเรียน :</strong>
-เตรียมวิศวกรรมศาสตร์
-</p>
 
-<p>
-<strong>ระดับการศึกษา :</strong>
-มัธยมศึกษาปีที่ 6/5
-</p>
+                    <p>
 
-<p>
-<strong>ความสนใจ :</strong>
-วิศวกรรมโยธา
-</p>
+                        <strong>
+                            ชื่อเล่น :
+                        </strong>
 
-</div>
+                        เป๊ก
 
+                    </p>
 
 
-<div class="contact">
+                    <p>
 
-<h3>
-📩 ช่องทางการติดต่อ
-</h3>
+                        <strong>
+                            วันเกิด :
+                        </strong>
 
-<p>
-☎️ <strong>เบอร์โทรศัพท์ :</strong>
-0993938532
-</p>
+                        28 สิงหาคม 2551
 
-<p>
-📘 <strong>Facebook :</strong>
-Anantapol Udomphon
-</p>
+                    </p>
 
-<p>
-📧 <strong>Gmail :</strong>
-anantapol2830@gmail.com
-</p>
 
-</div>
+                    <p>
 
-</div>
+                        <strong>
+                            อายุ :
+                        </strong>
 
+                        18 ปี
 
+                    </p>
 
-<!-- =========================
-     มหาวิทยาลัย
-========================= -->
 
-<div class="card" id="university">
+                    <p>
 
-<h2>
-🎓 มหาวิทยาลัยที่ผมสนใจอยากจะเข้าศึกษาต่อ
-</h2>
+                        <strong>
+                            ระดับการศึกษา :
+                        </strong>
 
-<div class="divider"></div>
+                        ชั้นมัธยมศึกษาปีที่ 6/5
 
+                    </p>
 
-<div class="university">
 
-<h3>
-🏫 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-</h3>
+                    <p>
 
-<p>
-<strong>
-คณะวิศวกรรมศาสตร์
-</strong>
-</p>
+                        <strong>
+                            สายการเรียน :
+                        </strong>
 
-<p>
-<strong>
-สาขาวิชาวิศวกรรมโยธา
-</strong>
-</p>
+                        เตรียมวิศวกรรม
 
-</div>
+                    </p>
 
 
+                    <p>
 
-<div class="reason">
+                        <strong>
+                            ความสนใจ :
+                        </strong>
 
-<h3>
-🧱 เหตุผลที่ผมสนใจ
-</h3>
+                        วิศวกรรมโยธา
 
-<p>
+                    </p>
 
-ผมมีความสนใจในด้านวิศวกรรมโยธา
-เพราะเป็นศาสตร์ที่เกี่ยวข้องกับ
-การออกแบบ การคำนวณ และการก่อสร้าง
-สิ่งปลูกสร้างต่าง ๆ ที่อยู่รอบตัวเรา
 
-</p>
+                </div>
 
-<p>
+            </div>
 
-ผมชอบแนวคิดที่สามารถเริ่มต้นจาก
-ความคิดหรือแบบที่วางไว้ แล้วพัฒนา
-ให้กลายเป็นสิ่งปลูกสร้างที่เกิดขึ้นจริง
 
-</p>
+            <div class="info-box">
 
-<p>
 
-ผมอยากสร้างบางสิ่งบางอย่างขึ้นมา
-และคอยดูว่าสิ่งที่ตัวเองมีส่วนร่วมสร้างขึ้นมา
-จะกลายเป็นผลงานที่สามารถใช้งานได้จริง
+                <h3>
+                    🎯 เป้าหมายทางการศึกษา
+                </h3>
 
-</p>
 
-<p>
+                <p>
 
-ผมจึงมีความตั้งใจที่จะศึกษาต่อ
-ด้านวิศวกรรมโยธา เพื่อพัฒนาความรู้
-และทักษะด้านการออกแบบ การคำนวณ
-การก่อสร้าง และการแก้ไขปัญหา
-เพื่อนำไปต่อยอดในอนาคต
+                    มีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
+                    ด้านวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา
+                    เพื่อพัฒนาความรู้และทักษะทางด้านวิศวกรรม
+                    และนำความรู้ไปใช้ในการประกอบอาชีพในอนาคต
 
-</p>
+                </p>
 
-</div>
 
+            </div>
 
+        </section>
 
-<div class="goal">
 
-<h3>
-🎯 เป้าหมายของผม
-</h3>
+        <!-- Contact -->
 
-<p>
+        <section class="contact">
 
-ตั้งใจเรียนและพัฒนาทักษะด้านคณิตศาสตร์
-ฟิสิกส์ การคิดวิเคราะห์ และการแก้ปัญหา
-เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อ
-ด้านวิศวกรรมโยธา
+            <h2>
+                📞 ช่องทางการติดต่อ
+            </h2>
 
-</p>
 
-<p>
+            <p>
 
-ในอนาคต ผมอยากนำความรู้
-ด้านวิศวกรรมโยธามาใช้ในการออกแบบ
-และสร้างสิ่งปลูกสร้างที่มีคุณภาพ
-แข็งแรง ปลอดภัย และเกิดประโยชน์
-ต่อผู้คนและสังคม
+                <strong>
+                    📱 โทรศัพท์ :
+                </strong>
 
-</p>
+                099-393-8532
 
-</div>
+            </p>
 
-</div>
 
+            <p>
 
+                <strong>
+                    📘 Facebook :
+                </strong>
 
-<!-- =========================
-     ผลงานและรางวัล
-========================= -->
+                Anantapol Udomphon
 
-<div class="card" id="portfolio">
+            </p>
 
-<h2>
-🏆 ผลงานและรางวัล
-</h2>
 
-<div class="divider"></div>
+            <p>
 
+                <strong>
+                    📧 Gmail :
+                </strong>
 
+                anantapol2830@gmail.com
 
-<!-- =========================
-     ผลงานที่ 1
-     IMG_0016.jpeg
-========================= -->
+            </p>
 
-<div class="project">
+        </section>
 
-<h3>
-🏗️ ผลงานที่ 1 : HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
-</h3>
 
-<p>
-📚 ระดับมัธยมศึกษาตอนปลาย
-</p>
+        <!-- University -->
 
-<p>
-<strong>ชื่อผลงาน :</strong>
-HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
-</p>
+        <section id="university">
 
-<p>
-<strong>รายละเอียด :</strong>
-เข้าร่วมการทดสอบความรู้และสมรรถนะทางวิศวกรรม
-HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
-จัดโดย School of Engineering,
-สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-และได้รับการประเมินในระดับ
-<strong>EMERGING CALIBER</strong>
-</p>
+            <h2>
+                🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ
+            </h2>
 
-<p>
-<strong>วันที่ :</strong>
-31 สิงหาคม 2569
-</p>
 
+            <div class="university">
 
-<div class="image-box">
 
-<img
-    src="IMG_0016.jpeg"
-    alt="เกียรติบัตร HIGH CALIBER ENGINEERING COMPETENCY TEST 2026"
->
+                <h3>
 
-</div>
+                    🏫
+                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
+                </h3>
 
-<div class="skill">
 
-<h3>
-📐 ทักษะที่ได้รับ
-</h3>
+                <p>
 
-<p>
+                    <strong>
+                        คณะวิศวกรรมศาสตร์
+                    </strong>
 
-การคิดวิเคราะห์และการแก้โจทย์ปัญหา
-การประยุกต์ใช้ความรู้ด้านวิศวกรรม
-การคิดอย่างเป็นระบบภายใต้เวลาที่กำหนด
-และการประเมินและพัฒนาความรู้ของตนเอง
+                </p>
 
-</p>
 
-</div>
+                <p>
 
-</div>
+                    <strong>
+                        สาขาวิศวกรรมโยธา
+                    </strong>
 
+                </p>
 
 
-<!-- =========================
-     ผลงานที่ 2
-     IMG_0015.jpeg
-========================= -->
+                <br>
 
-<div class="project">
 
-<h3>
-🏢 ผลงานที่ 2 : Workshop การทดสอบวัสดุวิศวกรรมโยธา
-</h3>
+                <p>
 
-<p>
-📚 ระดับมัธยมศึกษาตอนปลาย
-</p>
+                    <strong>
+                        เหตุผลที่สนใจ :
+                    </strong>
 
-<p>
-<strong>ชื่อผลงาน :</strong>
-Workshop การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
-</p>
+                </p>
 
-<p>
-<strong>รายละเอียด :</strong>
-เข้าร่วมกิจกรรม Workshop
-“การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]”
-ในงาน K-ENGINEERING WORLD TOUR
-AND COMPETENCY CHALLENGE 2026
-จัดโดย School of Engineering,
-สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-</p>
 
-<p>
-<strong>วันที่ :</strong>
-5 กรกฎาคม 2569
-</p>
+                <p>
 
+                    มีความสนใจในด้านวิศวกรรมโยธา
+                    และต้องการศึกษาต่อในสถาบันที่มีความรู้
+                    และความเชี่ยวชาญด้านวิศวกรรม
+                    เพื่อพัฒนาตนเองให้มีความรู้และทักษะ
+                    พร้อมสำหรับการประกอบอาชีพในอนาคต
 
-<div class="image-box">
+                </p>
 
-<img
-    src="IMG_0015.jpeg"
-    alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
->
 
-</div>
+                <br>
 
 
-<div class="skill">
+                <p>
 
-<h3>
-📊 ทักษะที่ได้รับ
-</h3>
+                    <strong>
+                        เป้าหมาย :
+                    </strong>
 
-<p>
+                </p>
 
-ความรู้พื้นฐานเกี่ยวกับวัสดุที่ใช้ในงานวิศวกรรมโยธา
-การเรียนรู้กระบวนการทดสอบวัสดุ
-การสังเกตและวิเคราะห์คุณสมบัติของวัสดุ
-และความเข้าใจความสำคัญของวัสดุต่อความแข็งแรง
-และความปลอดภัยของงานก่อสร้าง
 
-</p>
+                <p>
 
-</div>
+                    ต้องการพัฒนาความรู้ด้านวิศวกรรมโยธา
+                    ทั้งภาคทฤษฎีและภาคปฏิบัติ
+                    รวมถึงนำความรู้ไปประยุกต์ใช้ในการทำงานจริง
 
-</div>
+                </p>
 
 
+            </div>
 
-<!-- =========================
-     ผลงานที่ 3
-     IMG_0014.jpeg
-========================= -->
+        </section>
 
-<div class="project">
 
-<h3>
-📜 ผลงานที่ 3 : Mini Startup Camp
-</h3>
+        <!-- Portfolio -->
 
-<p>
-📚 ระดับมัธยมศึกษาตอนปลาย
-</p>
+        <section id="portfolio">
 
-<p>
-<strong>ชื่อผลงาน :</strong>
-Workshop Mini Startup Camp [Non-EE]
-</p>
+            <h2>
+                🏆 ผลงานและกิจกรรม
+            </h2>
 
-<p>
-<strong>รายละเอียด :</strong>
-เข้าร่วมกิจกรรม Workshop
-“Mini Startup Camp [Non-EE]”
-ในงาน K-ENGINEERING WORLD TOUR
-AND COMPETENCY CHALLENGE 2026
-จัดโดย School of Engineering,
-สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-</p>
 
-<p>
-<strong>วันที่ :</strong>
-5 กรกฎาคม 2569
-</p>
+            <!-- Project 1 -->
 
+            <div class="project">
 
-<div class="image-box">
 
-<img
-    src="IMG_0014.jpeg"
-    alt="เกียรติบัตร Mini Startup Camp"
->
+                <h3>
 
-</div>
+                    🏗️ ผลงานที่ 1 :
+                    HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
 
+                </h3>
 
-<div class="skill">
 
-<h3>
-⭐ ทักษะที่ได้รับ
-</h3>
+                <p>
 
-<p>
+                    <strong>
+                        ชื่อผลงาน :
+                    </strong>
 
-การคิดสร้างสรรค์และการพัฒนาแนวคิด
-การคิดวิเคราะห์เพื่อแก้ไขปัญหา
-การวางแผนและพัฒนาแนวคิดให้เป็นรูปธรรม
-การนำเสนอและการสื่อสารแนวคิด
-และการทำงานร่วมกับผู้อื่น
+                    HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
 
-</p>
+                </p>
 
-</div>
 
-</div>
+                <p>
 
+                    <strong>
+                        รายละเอียด :
+                    </strong>
 
+                    เข้าร่วมการทดสอบความรู้และสมรรถนะทางวิศวกรรม
+                    จัดโดย School of Engineering, KMITL
+                    และได้รับการประเมินในระดับ
+                    <strong>
+                        EMERGING CALIBER
+                    </strong>
 
-<!-- =========================
-     ผลงานที่ 4
-     IMG_0017.jpeg
-========================= -->
+                </p>
 
-<div class="project">
 
-<h3>
-👷 ผลงานที่ 4 : นักเรียนจิตอาสา BBU JOB FAIR
-</h3>
+                <p>
 
-<p>
-📚 ระดับมัธยมศึกษาตอนปลาย
-</p>
+                    <strong>
+                        วันที่ :
+                    </strong>
 
-<p>
-<strong>ชื่อผลงาน :</strong>
-นักเรียนจิตอาสาในงานเปิดบ้านวิชาการ
-“BBU JOB FAIR”
-</p>
+                    31 สิงหาคม 2569
 
-<p>
-<strong>รายละเอียด :</strong>
-เข้าร่วมเป็นนักเรียนจิตอาสา
-ในงานเปิดบ้านวิชาการ
-“BBU JOB FAIR”
-เพื่อช่วยสนับสนุนการดำเนินงาน
-ของกิจกรรมภายในโรงเรียน
-</p>
+                </p>
 
-<p>
-<strong>วันที่ :</strong>
-29 มกราคม 2569
-</p>
 
+                <img
+                    src="IMG_0016.jpeg"
+                    alt="เกียรติบัตร HIGH CALIBER ENGINEERING COMPETENCY TEST 2026"
+                >
 
-<div class="image-box">
 
-<img
-    src="IMG_0017.jpeg"
-    alt="เกียรติบัตรนักเรียนจิตอาสา BBU JOB FAIR"
->
+                <p>
+                    <strong>
+                        🎯 ทักษะที่ได้รับ :
+                    </strong>
+                </p>
 
-</div>
 
+                <ul>
 
-<div class="skill">
+                    <li>
+                        การคิดวิเคราะห์และการแก้โจทย์ปัญหา
+                    </li>
 
-<h3>
-❤️ ทักษะที่ได้รับ
-</h3>
+                    <li>
+                        การประยุกต์ใช้ความรู้ด้านวิศวกรรม
+                    </li>
 
-<p>
+                    <li>
+                        การคิดอย่างเป็นระบบภายใต้เวลาที่กำหนด
+                    </li>
 
-ความรับผิดชอบต่อหน้าที่
-การทำงานเป็นทีม
-การสื่อสารและประสานงานกับผู้อื่น
-การมีจิตอาสาและการช่วยเหลือส่วนรวม
-และการแก้ไขสถานการณ์เฉพาะหน้า
+                    <li>
+                        การประเมินและพัฒนาความรู้ของตนเอง
+                    </li>
 
-</p>
+                </ul>
 
-</div>
+            </div>
 
-</div>
 
+            <!-- Project 2 -->
 
+            <div class="project">
 
-</div>
 
+                <h3>
 
+                    🏢 ผลงานที่ 2 :
+                    Workshop การทดสอบวัสดุวิศวกรรมโยธา
 
-<!-- =========================
-     ทักษะ
-========================= -->
+                </h3>
 
-<div class="card">
 
-<h2>
-🛠️ ทักษะที่ได้รับ
-</h2>
+                <p>
 
-<div class="divider"></div>
+                    <strong>
+                        ชื่อผลงาน :
+                    </strong>
 
+                    Workshop การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
 
-<div class="skill">
+                </p>
 
-<h3>
-🧠 การคิดวิเคราะห์
-</h3>
 
-<p>
+                <p>
 
-ฝึกคิด วิเคราะห์ปัญหา
-และหาวิธีแก้ไขอย่างเป็นขั้นตอน
+                    <strong>
+                        รายละเอียด :
+                    </strong>
 
-</p>
+                    เข้าร่วมกิจกรรม Workshop
+                    “การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]”
+                    ในงาน
+                    K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
+                    จัดโดย School of Engineering, KMITL
 
-</div>
+                </p>
 
 
-<div class="skill">
+                <p>
 
-<h3>
-📐 การคำนวณ
-</h3>
+                    <strong>
+                        วันที่ :
+                    </strong>
 
-<p>
+                    5 กรกฎาคม 2569
 
-พัฒนาทักษะด้านคณิตศาสตร์
-และการคำนวณ ซึ่งเป็นพื้นฐานสำคัญ
-สำหรับการศึกษาด้านวิศวกรรม
+                </p>
 
-</p>
 
-</div>
+                <img
+                    src="IMG_0015.jpeg"
+                    alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+                >
 
 
-<div class="skill">
+                <p>
 
-<h3>
-🏗️ ความสนใจด้านวิศวกรรมโยธา
-</h3>
+                    <strong>
+                        🎯 ทักษะที่ได้รับ :
+                    </strong>
 
-<p>
+                </p>
 
-มีความสนใจเกี่ยวกับการออกแบบ
-การก่อสร้าง และสิ่งปลูกสร้าง
-รวมถึงการนำความรู้มาประยุกต์ใช้
-ในสถานการณ์จริง
 
-</p>
+                <ul>
 
-</div>
+                    <li>
+                        ความรู้พื้นฐานเกี่ยวกับวัสดุที่ใช้ในงานวิศวกรรมโยธา
+                    </li>
 
+                    <li>
+                        การเรียนรู้กระบวนการทดสอบวัสดุ
+                    </li>
 
-<div class="skill">
+                    <li>
+                        การสังเกตและวิเคราะห์คุณสมบัติของวัสดุ
+                    </li>
 
-<h3>
-🤝 การทำงานเป็นทีม
-</h3>
+                    <li>
+                        ความเข้าใจความสำคัญของวัสดุต่อความแข็งแรง
+                        และความปลอดภัยของงานก่อสร้าง
+                    </li>
 
-<p>
+                </ul>
 
-ฝึกการสื่อสาร การแบ่งหน้าที่
-การวางแผน และการทำงานร่วมกับผู้อื่น
+            </div>
 
-</p>
 
-</div>
+            <!-- Project 3 -->
 
+            <div class="project">
 
-<div class="skill">
 
-<h3>
-🔬 ความรู้พื้นฐานด้านวัสดุวิศวกรรมโยธา
-</h3>
+                <h3>
 
-<p>
+                    📜 ผลงานที่ 3 :
+                    Mini Startup Camp
 
-เรียนรู้เกี่ยวกับวัสดุที่ใช้ในงานวิศวกรรมโยธา
-และความสำคัญของคุณสมบัติวัสดุ
-ต่อการก่อสร้างและความปลอดภัย
+                </h3>
 
-</p>
 
-</div>
+                <p>
 
+                    <strong>
+                        ชื่อผลงาน :
+                    </strong>
 
-<div class="skill">
+                    Workshop Mini Startup Camp [Non-EE]
 
-<h3>
-💡 การคิดสร้างสรรค์
-</h3>
+                </p>
 
-<p>
 
-ฝึกพัฒนาแนวคิดใหม่ ๆ
-การวางแผน และการนำแนวคิด
-ไปต่อยอดให้เป็นรูปธรรม
+                <p>
 
-</p>
+                    <strong>
+                        รายละเอียด :
+                    </strong>
 
-</div>
+                    เข้าร่วมกิจกรรม Workshop
+                    “Mini Startup Camp [Non-EE]”
+                    ในงาน
+                    K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
+                    จัดโดย School of Engineering, KMITL
 
+                </p>
 
-<div class="skill">
 
-<h3>
-❤️ จิตอาสาและความรับผิดชอบ
-</h3>
+                <p>
 
-<p>
+                    <strong>
+                        วันที่ :
+                    </strong>
 
-ฝึกความรับผิดชอบต่อหน้าที่
-การช่วยเหลือผู้อื่น
-การทำงานร่วมกับผู้อื่น
-และการมีส่วนร่วมในกิจกรรมส่วนรวม
+                    5 กรกฎาคม 2569
 
-</p>
+                </p>
 
-</div>
 
-</div>
+                <img
+                    src="IMG_0014.jpeg"
+                    alt="เกียรติบัตร Mini Startup Camp"
+                >
 
 
+                <p>
 
-<!-- =========================
-     ขอบคุณ
-========================= -->
+                    <strong>
+                        🎯 ทักษะที่ได้รับ :
+                    </strong>
 
-<div class="card thank" id="thanks">
+                </p>
 
-<h2>
-📐 ขอบคุณ
-</h2>
 
-<div class="divider"></div>
+                <ul>
 
-<p>
+                    <li>
+                        การคิดสร้างสรรค์และการพัฒนาแนวคิด
+                    </li>
 
-ขอบคุณที่รับชมแฟ้มสะสมผลงาน
-ของผมนะครับ
+                    <li>
+                        การคิดวิเคราะห์เพื่อแก้ไขปัญหา
+                    </li>
 
-</p>
+                    <li>
+                        การวางแผนและพัฒนาแนวคิดให้เป็นรูปธรรม
+                    </li>
 
-<p>
+                    <li>
+                        การนำเสนอและการสื่อสารแนวคิด
+                    </li>
 
-หวังว่าแฟ้มสะสมผลงานนี้
-จะทำให้ทุกคนได้รู้จักตัวผม
-ความสนใจ ความสามารถ
-และเป้าหมายในอนาคตของผม
-มากยิ่งขึ้น
+                    <li>
+                        การทำงานร่วมกับผู้อื่น
+                    </li>
 
-</p>
+                </ul>
 
-<p>
-🏗️ 📐 🏢 👷 🛠️ ⭐
-</p>
+            </div>
 
-<p>
 
-<strong>
-🔶 นายอนันทพล อุดมผล 🔶
-</strong>
+            <!-- Project 4 -->
 
-</p>
+            <div class="project">
 
-</div>
 
+                <h3>
 
+                    👷 ผลงานที่ 4 :
+                    นักเรียนจิตอาสา BBU JOB FAIR
 
-<!-- =========================
-     กลับหน้าหลัก
-========================= -->
+                </h3>
 
-<div style="text-align:center; margin-bottom:50px;">
 
-<a href="index.html" class="btn">
-🏠 กลับหน้าหลัก 🏠
-</a>
+                <p>
 
-</div>
+                    <strong>
+                        ประเภท :
+                    </strong>
 
+                    กิจกรรมจิตอาสา
 
-</div>
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        ชื่อผลงาน :
+                    </strong>
+
+                    นักเรียนจิตอาสาในงานเปิดบ้านวิชาการ
+                    “BBU JOB FAIR”
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        รายละเอียด :
+                    </strong>
+
+                    เข้าร่วมเป็นนักเรียนจิตอาสา
+                    ในงานเปิดบ้านวิชาการ
+                    “BBU JOB FAIR”
+                    เพื่อช่วยสนับสนุนการดำเนินงาน
+                    ของกิจกรรมภายในโรงเรียน
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        วันที่ :
+                    </strong>
+
+                    29 มกราคม 2569
+
+                </p>
+
+
+                <img
+                    src="IMG_0017.jpeg"
+                    alt="เกียรติบัตรนักเรียนจิตอาสา BBU JOB FAIR"
+                >
+
+
+                <p>
+
+                    <strong>
+                        🎯 ทักษะที่ได้รับ :
+                    </strong>
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        ความรับผิดชอบต่อหน้าที่
+                    </li>
+
+                    <li>
+                        การทำงานเป็นทีม
+                    </li>
+
+                    <li>
+                        การสื่อสารและประสานงานกับผู้อื่น
+                    </li>
+
+                    <li>
+                        การมีจิตอาสาและการช่วยเหลือส่วนรวม
+                    </li>
+
+                    <li>
+                        การแก้ไขสถานการณ์เฉพาะหน้า
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Overall Skills -->
+
+        <section>
+
+            <h2>
+                💡 ทักษะและความสามารถโดยรวม
+            </h2>
+
+
+            <div class="skills">
+
+
+                <span class="skill">
+                    🧠 การคิดวิเคราะห์
+                </span>
+
+
+                <span class="skill">
+                    🏗️ ความสนใจด้านวิศวกรรมโยธา
+                </span>
+
+
+                <span class="skill">
+                    🔬 ความรู้พื้นฐานด้านวัสดุวิศวกรรมโยธา
+                </span>
+
+
+                <span class="skill">
+                    💡 การคิดสร้างสรรค์
+                </span>
+
+
+                <span class="skill">
+                    🤝 การทำงานเป็นทีม
+                </span>
+
+
+                <span class="skill">
+                    📢 การสื่อสาร
+                </span>
+
+
+                <span class="skill">
+                    🎯 ความรับผิดชอบ
+                </span>
+
+
+                <span class="skill">
+                    ❤️ จิตอาสา
+                </span>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Thanks -->
+
+        <section id="thanks">
+
+
+            <h2>
+                🙏 ขอบคุณ
+            </h2>
+
+
+            <p>
+
+                ขอขอบคุณทุกท่านที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงาน
+                (Portfolio) ของข้าพเจ้า
+
+            </p>
+
+
+            <p>
+
+                ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานนี้
+                จะช่วยแสดงให้เห็นถึงความตั้งใจ
+                ความสนใจ ความสามารถ
+                และประสบการณ์ที่ได้สั่งสมมา
+                และข้าพเจ้าพร้อมที่จะเรียนรู้
+                และพัฒนาตนเองต่อไปในอนาคต
+
+            </p>
+
+
+            <br>
+
+
+            <a href="index.html" class="btn">
+
+                🏠 กลับหน้าแรก
+
+            </a>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Portfolio ของ นายอนันทพล อุดมผล
+        </p>
+
+        <p>
+            🏗️ Civil Engineering | KMITL
+        </p>
+
+    </footer>
 
 
 </body>
