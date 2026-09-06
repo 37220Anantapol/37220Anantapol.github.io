@@ -8,189 +8,715 @@
 
 <style>
 
+/* =========================
+   พื้นฐานของเว็บไซต์
+========================= */
+
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #eeeeee, #d6d6d6);
-    color: #333;
+html {
+    scroll-behavior: smooth;
 }
 
-/* แถบเมนู */
+body {
+    margin: 0;
+    font-family: Arial, "Tahoma", sans-serif;
+    color: #333;
+
+    /* พื้นหลังสีเทา */
+    background:
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+        repeating-linear-gradient(
+            0deg,
+            #d8d8d8 0px,
+            #d8d8d8 1px,
+            transparent 1px,
+            transparent 30px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #d8d8d8 0px,
+            #d8d8d8 1px,
+            transparent 1px,
+            transparent 30px
+        );
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   แถบด้านบน
+========================= */
+
+.top-bar {
+    height: 8px;
+    background: #f28c28;
+}
+
+
+/* =========================
+   เมนู
+========================= */
+
 nav {
     background: #333333;
-    padding: 15px;
+    padding: 14px;
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 nav a {
     display: inline-block;
+
     color: white;
     text-decoration: none;
-    margin: 5px;
+
+    margin: 4px;
     padding: 10px 18px;
+
+    border: 2px solid #666;
     border-radius: 25px;
-    background: #444444;
+
+    background: #444;
+
     transition: 0.3s;
 }
 
 nav a:hover {
     background: #f28c28;
-    transform: translateY(-2px);
+    border-color: #f28c28;
+
+    transform: translateY(-3px);
 }
 
-/* กล่องหลัก */
-.card {
-    max-width: 850px;
-    margin: 50px auto;
-    padding: 45px 30px;
-    background: #ffffff;
-    border-radius: 30px;
+
+/* =========================
+   ส่วน Hero
+========================= */
+
+.hero {
+    max-width: 950px;
+
+    margin: 50px auto 30px;
+
+    padding: 55px 30px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 35px;
+
     border: 4px solid #f28c28;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.18);
+
     text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
-/* หัวข้อ */
+
+/* เส้นตกแต่งด้านบน */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 10px;
+
+    background: #f28c28;
+}
+
+
+/* วงกลมตกแต่ง */
+
+.hero::after {
+    content: "⚙️";
+
+    position: absolute;
+
+    right: 25px;
+    top: 20px;
+
+    font-size: 45px;
+
+    opacity: 0.15;
+
+    animation: rotate 8s linear infinite;
+}
+
+
+/* =========================
+   ไอคอนวิศวกรรม
+========================= */
+
+.engineering-icon {
+    font-size: 55px;
+
+    margin-bottom: 5px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
 h1 {
+    margin: 10px 0;
+
+    font-size: 42px;
+
+    color: #333;
+}
+
+h1 span {
     color: #f28c28;
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
 .subtitle {
+    font-size: 21px;
+
     color: #666;
-    font-size: 20px;
+
+    margin-bottom: 25px;
 }
 
-/* รูปโปรไฟล์ */
-.profile {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 8px solid #f28c28;
+
+/* =========================
+   เส้นประดับ
+========================= */
+
+.line {
+    width: 180px;
+
+    height: 4px;
+
+    background: #f28c28;
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   รูปโปรไฟล์
+========================= */
+
+.profile-box {
     margin: 25px auto;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+    width: 220px;
+    height: 220px;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f28c28,
+            #333333
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+    animation: float 4s ease-in-out infinite;
 }
 
-/* ข้อความ */
-.info {
-    font-size: 19px;
+.profile {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+}
+
+
+/* =========================
+   ข้อมูลแนะนำตัว
+========================= */
+
+.intro {
+    max-width: 700px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background: #f5f5f5;
+
+    border-left: 7px solid #f28c28;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.intro p {
+    font-size: 18px;
+
     line-height: 1.8;
-    color: #555;
+
+    margin: 10px 0;
 }
 
-/* ปุ่ม */
+.highlight {
+    color: #f28c28;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   กล่องความสนใจ
+========================= */
+
+.interest-title {
+    color: #333;
+
+    font-size: 25px;
+
+    margin-top: 30px;
+}
+
+.interests {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.interest {
+    background: #333;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    border: 2px solid #f28c28;
+
+    transition: 0.3s;
+}
+
+.interest:hover {
+    background: #f28c28;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   ปุ่ม Portfolio
+========================= */
+
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
     background: #f28c28;
+
     color: white;
+
     text-decoration: none;
+
     border-radius: 30px;
-    font-size: 18px;
+
+    font-size: 19px;
+
     font-weight: bold;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,0.2);
+
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #333333;
-    transform: scale(1.05);
+    background: #333;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.25);
 }
 
-/* มือถือ */
-@media (max-width: 600px) {
 
-    .card {
-        margin: 25px 15px;
-        padding: 30px 20px;
+/* =========================
+   ส่วนล่าง
+========================= */
+
+.engineer-section {
+    max-width: 950px;
+
+    margin: 30px auto 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 0 15px;
+}
+
+.engineer-card {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border-top: 5px solid #f28c28;
+
+    box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.engineer-card:hover {
+    transform: translateY(-7px);
+}
+
+.engineer-card .icon {
+    font-size: 40px;
+}
+
+.engineer-card h3 {
+    color: #f28c28;
+}
+
+.engineer-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 6px solid #f28c28;
+}
+
+footer strong {
+    color: #f28c28;
+}
+
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
     }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   สำหรับโทรศัพท์
+========================= */
+
+@media (max-width: 700px) {
 
     h1 {
         font-size: 30px;
     }
 
-    .profile {
-        width: 160px;
-        height: 160px;
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .hero {
+        margin: 30px 15px;
+        padding: 45px 20px;
+    }
+
+    .profile-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .engineer-section {
+        grid-template-columns: 1fr;
     }
 
     nav a {
-        font-size: 14px;
         padding: 8px 12px;
+        font-size: 14px;
     }
+
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- เมนู -->
+
+<!-- แถบสีส้มด้านบน -->
+<div class="top-bar"></div>
+
+
+<!-- =========================
+     เมนู
+========================= -->
+
 <nav>
-    <a href="index.html">🏠 หน้าหลัก</a>
-    <a href="portfolio.html">📁 Portfolio</a>
+
+    <a href="index.html">
+        🏠 หน้าหลัก
+    </a>
+
+    <a href="portfolio.html">
+        📁 Portfolio
+    </a>
+
 </nav>
 
 
-<!-- เนื้อหาหลัก -->
-<div class="card">
+<!-- =========================
+     หน้าแนะนำตัว
+========================= -->
 
-    <h1>👋 ยินดีต้อนรับ</h1>
+<section class="hero">
+
+
+    <!-- ไอคอนวิศวกรรม -->
+    <div class="engineering-icon">
+        🏗️
+    </div>
+
+
+    <h1>
+        ยินดีต้อนรับสู่
+        <span>Portfolio</span>
+    </h1>
+
 
     <p class="subtitle">
-        เว็บไซต์แนะนำตัวและแฟ้มสะสมผลงาน
+        เว็บไซต์แนะนำตัวของว่าที่วิศวกรโยธา
     </p>
 
 
-    <!-- รูปโปรไฟล์ -->
-    <img src="profile.jpg"
-         alt="รูปโปรไฟล์"
-         class="profile">
+    <div class="line"></div>
 
 
-    <div class="info">
+    <!-- =========================
+         รูปโปรไฟล์
+
+         เปลี่ยนชื่อ profile.jpg
+         เป็นชื่อไฟล์รูปของนายได้
+    ========================= -->
+
+    <div class="profile-box">
+
+        <img
+            src="profile.jpg"
+            alt="รูปโปรไฟล์ของอนันทพล"
+            class="profile"
+        >
+
+    </div>
+
+
+    <!-- =========================
+         ข้อมูลแนะนำตัว
+    ========================= -->
+
+    <div class="intro">
 
         <p>
-            สวัสดีครับ ผมชื่อ
-            <strong>อนันทพล อุดมผล</strong>
+            👋 สวัสดีครับ ผมชื่อ
+            <span class="highlight">
+                อนันทพล อุดมผล
+            </span>
         </p>
 
         <p>
-            นักเรียนชั้นมัธยมศึกษาปีที่ 6
+            🎓 ปัจจุบันกำลังศึกษาอยู่ระดับ
+            <span class="highlight">
+                มัธยมศึกษาปีที่ 6
+            </span>
         </p>
 
         <p>
-            📐 มีความสนใจด้าน
-            <strong>วิศวกรรมโยธา (Civil Engineering)</strong>
+            🏗️ มีความสนใจด้าน
+            <span class="highlight">
+                วิศวกรรมโยธา
+            </span>
         </p>
 
         <p>
-            ผมสนใจการออกแบบ การก่อสร้าง
-            และการสร้างสิ่งต่าง ๆ ที่สามารถนำไปใช้ได้จริง
+            📐 ผมสนใจการออกแบบ การก่อสร้าง
+            และการสร้างสิ่งปลูกสร้างที่สามารถ
+            นำไปใช้ประโยชน์ได้จริง
         </p>
 
     </div>
 
 
+    <!-- =========================
+         สิ่งที่สนใจ
+    ========================= -->
+
+    <h2 class="interest-title">
+        🏗️ สิ่งที่ผมสนใจ
+    </h2>
+
+
+    <div class="interests">
+
+        <div class="interest">
+            📐 การออกแบบ
+        </div>
+
+        <div class="interest">
+            🏢 งานก่อสร้าง
+        </div>
+
+        <div class="interest">
+            🏗️ วิศวกรรมโยธา
+        </div>
+
+        <div class="interest">
+            🧱 โครงสร้าง
+        </div>
+
+    </div>
+
+
     <!-- ปุ่มไป Portfolio -->
+
     <a href="portfolio.html" class="btn">
         📁 ดูแฟ้มสะสมผลงาน
     </a>
 
-</div>
 
-</body>
-</html>
+</section>
+
+
 
 <!-- =========================
-     ABOUT ME
-================
+     ส่วนเกี่ยวกับวิศวกรรมโยธา
+========================= -->
+
+<section class="engineer-section">
+
+
+    <div class="engineer-card">
+
+        <div class="icon">
+            📐
+        </div>
+
+        <h3>
+            การออกแบบ
+        </h3>
+
+        <p>
+            สนใจการออกแบบสิ่งปลูกสร้าง
+            และการวางแผนงานอย่างเป็นระบบ
+        </p>
+
+    </div>
+
+
+    <div class="engineer-card">
+
+        <div class="icon">
+            🏗️
+        </div>
+
+        <h3>
+            การก่อสร้าง
+        </h3>
+
+        <p>
+            สนใจเรียนรู้เกี่ยวกับ
+            กระบวนการก่อสร้างและงานโครงสร้าง
+        </p>
+
+    </div>
+
+
+    <div class="engineer-card">
+
+        <div class="icon">
+            🧱
+        </div>
+
+        <h3>
+            งานโครงสร้าง
+        </h3>
+
+        <p>
+            ต้องการพัฒนาความรู้ด้านโครงสร้าง
+            และนำความรู้ไปใช้ในอนาคต
+  
