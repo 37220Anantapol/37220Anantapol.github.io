@@ -1,1 +1,456 @@
-
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงานและกิจกรรม | อนันทพล อุดมผล</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #eee5ff,
+        #dff1ff
+    );
+    min-height: 100vh;
+    color: #333;
+}
+/* =========================
+   แถบเมนู
+========================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        #7652b5,
+        #5799d5
+    );
+    padding: 15px 10px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.18);
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+/* =========================
+   กล่องหลัก
+========================= */
+.container {
+    max-width: 1050px;
+    margin: 110px auto 50px;
+    padding: 30px;
+}
+/* =========================
+   หัวข้อ
+========================= */
+.main-title {
+    text-align: center;
+    color: #7045a8;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.subtitle {
+    text-align: center;
+    color: #5799d5;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+/* =========================
+   หัวข้อแต่ละด้าน
+========================= */
+.section-title {
+    text-align: center;
+    margin: 45px 0 25px;
+    padding: 14px;
+    border-radius: 18px;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        #7652b5,
+        #5799d5
+    );
+    box-shadow:
+        0 5px 15px rgba(80,60,130,0.18);
+}
+.section-title h2 {
+    font-size: 25px;
+}
+/* =========================
+   การ์ดผลงาน
+========================= */
+.card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow:
+        0 7px 22px rgba(80,60,130,0.15);
+}
+.card h3 {
+    color: #7045a8;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* =========================
+   รูปเดี่ยว
+========================= */
+.single-image {
+    width: 75%;
+    max-width: 750px;
+    display: block;
+    margin: 0 auto 22px;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.18);
+}
+/* =========================
+   รูปคู่
+========================= */
+.two-images {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+.two-images img {
+    width: calc(50% - 10px);
+    max-height: 430px;
+    object-fit: contain;
+    background: white;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.18);
+}
+/* =========================
+   คำอธิบาย
+========================= */
+.description {
+    background: linear-gradient(
+        135deg,
+        #f5efff,
+        #eef9ff
+    );
+    border-left: 5px solid #7652b5;
+    padding: 18px 20px;
+    border-radius: 12px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+/* =========================
+   ปุ่ม
+========================= */
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 25px;
+    background: linear-gradient(
+        90deg,
+        #7652b5,
+        #5799d5
+    );
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 5px 12px rgba(80,60,130,0.25);
+}
+/* =========================
+   มือถือ
+========================= */
+@media (max-width: 700px) {
+    nav {
+        padding: 10px 5px;
+    }
+    nav a {
+        font-size: 12px;
+        margin: 2px;
+        padding: 6px 8px;
+    }
+    .container {
+        width: 92%;
+        margin-top: 125px;
+        padding: 15px;
+    }
+    .main-title {
+        font-size: 26px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .section-title h2 {
+        font-size: 21px;
+    }
+    .card {
+        padding: 18px;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    .single-image {
+        width: 100%;
+    }
+    .two-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .two-images img {
+        width: 100%;
+        max-height: none;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+<!-- =========================
+     แถบเมนู
+========================= -->
+<nav>
+<a href="index.html">
+    หน้าแรก
+</a>
+<a href="introduction.html">
+    คำนำ
+</a>
+<a href="about.html">
+    About Me
+</a>
+<a href="university.html">
+    มหาลัย
+</a>
+<a href="portfolio.html">
+    ผลงาน/กิจกรรม
+</a>
+<a href="skills.html">
+    ทักษะ
+</a>
+</nav>
+<!-- =========================
+     เนื้อหาหลักทั้งหมด
+========================= -->
+<div class="container">
+<h1 class="main-title">
+    🎖️ ผลงานและกิจกรรม
+</h1>
+<p class="subtitle">
+    รวบรวมผลงาน กิจกรรม และประสบการณ์
+    ที่ได้พัฒนาความรู้และทักษะของผม
+</p>
+<!-- ================================================= -->
+<!--                    ด้านวิชาการ                     -->
+<!-- ================================================= -->
+<div class="section-title">
+    <h2>
+        🏆 ด้านวิชาการ
+    </h2>
+</div>
+<!-- =========================
+     ผลงานวิชาการที่ 1
+========================= -->
+<div class="card">
+    <h3>
+        ผลงานที่ 1 : HIGH CALIBER ENGINEERING
+        COMPETENCY TEST 2026
+        ระดับ EMERGING CALIBER
+    </h3>
+    <img
+        src="IMG_0016.jpeg"
+        alt="เกียรติบัตร HIGH CALIBER ENGINEERING COMPETENCY TEST 2026"
+        class="single-image"
+    >
+    <p class="description">
+        ได้เข้าร่วมสอบวัดความรู้
+        “HIGH CALIBER ENGINEERING COMPETENCY TEST 2026”
+        ของคณะวิศวกรรมศาสตร์
+        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        และได้รับคะแนนในระดับ EMERGING CALIBER
+        กิจกรรมนี้ช่วยพัฒนาความรู้ด้านวิศวกรรม
+        การคิดวิเคราะห์ และการแก้ไขปัญหา
+    </p>
+</div>
+<!-- =========================
+     ผลงานวิชาการที่ 2
+========================= -->
+<div class="card">
+    <h3>
+        ผลงานที่ 2 : WORKSHOP หัวข้อ
+        การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+    </h3>
+    <img
+        src="IMG_0015.jpeg"
+        alt="เกียรติบัตร WORKSHOP การทดสอบวัสดุวิศวกรรมโยธา"
+        class="single-image"
+    >
+    <p class="description">
+        ได้เข้าร่วม WORKSHOP หัวข้อ
+        “การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]”
+        ในงาน K-ENGINEERING WORLD TOUR AND
+        COMPETENCY CHALLENGE 2026
+        ณ คณะวิศวกรรมศาสตร์
+        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        ทำให้ได้เรียนรู้เกี่ยวกับวัสดุทางวิศวกรรมโยธา
+        และได้เห็นแนวทางการทดสอบวัสดุในงานวิศวกรรม
+    </p>
+</div>
+<!-- =========================
+     ผลงานวิชาการที่ 3
+========================= -->
+<div class="card">
+    <h3>
+        ผลงานที่ 3 : WORKSHOP หัวข้อ
+        Mini Startup Camp [Non-EE]
+    </h3>
+    <div class="two-images">
+        <img
+            src="IMG_0014.jpeg"
+            alt="เกียรติบัตร Mini Startup Camp"
+        >
+        <img
+            src="IMG_0025.jpeg"
+            alt="ภาพกิจกรรม Mini Startup Camp"
+        >
+    </div>
+    <p class="description">
+        ได้เข้าร่วม WORKSHOP หัวข้อ
+        “Mini Startup Camp [Non-EE]”
+        ในงาน K-ENGINEERING WORLD TOUR AND
+        COMPETENCY CHALLENGE 2026
+        ณ คณะวิศวกรรมศาสตร์
+        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        กิจกรรมนี้ช่วยฝึกการคิดสร้างสรรค์
+        การวางแผน การทำงานร่วมกับผู้อื่น
+        และการนำแนวคิดมาต่อยอดให้เกิดเป็นผลงาน
+    </p>
+</div>
+<!-- =========================
+     ผลงานวิชาการที่ 4
+========================= -->
+<div class="card">
+    <h3>
+        ผลงานที่ 4 : นักเรียนจิตอาสาในงานเปิดบ้านวิชาการ
+        “BBU JOB FAIR”
+    </h3>
+    <div class="two-images">
+        <img
+            src="IMG_0017.jpeg"
+            alt="เกียรติบัตรนักเรียนจิตอาสาในงาน BBU JOB FAIR"
+        >
+        <img
+            src="IMG_0024.jpeg"
+            alt="ภาพกิจกรรม BBU JOB FAIR"
+        >
+    </div>
+    <p class="description">
+        ได้เข้าร่วมเป็นนักเรียนจิตอาสา
+        ในงานเปิดบ้านวิชาการ “BBU JOB FAIR”
+        เมื่อวันที่ 29 มกราคม พ.ศ. 2569
+        กิจกรรมนี้ช่วยฝึกความรับผิดชอบ
+        การทำงานร่วมกับผู้อื่น
+        การช่วยเหลือผู้อื่น
+        และการทำงานอย่างเป็นระบบ
+    </p>
+</div>
+<!-- ================================================= -->
+<!--                  ด้านภาวะผู้นำ                    -->
+<!-- ================================================= -->
+<div class="section-title">
+    <h2>
+        👑 ด้านภาวะผู้นำ
+    </h2>
+</div>
+<!-- =========================
+     ผลงานภาวะผู้นำที่ 1
+========================= -->
+<div class="card">
+    <h3>
+        ผลงานที่ 1 : ผู้ช่วยวิทยากรเนื่องในกิจกรรม
+        สัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ
+        ประจำปีการศึกษา 2569
+    </h3>
+    <div class="two-images">
+        <img
+            src="IMG_0030.jpeg"
+            alt="เกียรติบัตรผู้ช่วยวิทยากร"
+        >
+        <img
+            src="IMG_0028.jpeg"
+            alt="ภาพกิจกรรมสัปดาห์คณิตศาสตร์"
+        >
+    </div>
+    <p class="description">
+        ได้รับหน้าที่เป็นผู้ช่วยวิทยากร
+        เนื่องในกิจกรรม “สัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ”
+        ประจำปีการศึกษา 2569
+        ทำให้ได้ฝึกภาวะผู้นำ ความรับผิดชอบ
+        การสื่อสาร การทำงานร่วมกับผู้อื่น
+        และการช่วยถ่ายทอดความรู้ให้กับผู้เข้าร่วมกิจกรรม
+    </p>
+</div>
+<!-- =========================
+     ปุ่มท้ายหน้า
+========================= -->
+<div class="buttons">
+    <a
+        href="university.html"
+        class="btn"
+    >
+        ← ย้อนกลับ
+    </a>
+    <a
+        href="skills.html"
+        class="btn"
+    >
+        ถัดไป → ทักษะ
+    </a>
+</div>
+</div>
+</body>
+</html>
