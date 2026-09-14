@@ -1,1 +1,393 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | นายอนันทพล อุดมผล</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Tahoma", sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #eee6ff,
+                #e8eaff,
+                #dff3ff
+            );
+
+            color: #3f3158;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* =========================
+           เมนูด้านบน
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 16px 10px;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            box-shadow:
+                0 4px 15px rgba(95, 70, 150, 0.12);
+
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+
+            text-decoration: none;
+
+            color: #60428d;
+
+            font-weight: bold;
+
+            margin: 3px 5px;
+
+            padding: 8px 12px;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+
+            background: linear-gradient(
+                90deg,
+                #7951b3,
+                #5799d5
+            );
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           หน้าแรก
+        ========================= */
+
+        .home {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 50px 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.55);
+
+            padding: 45px 30px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 40px rgba(88, 68, 140, 0.15);
+
+            backdrop-filter: blur(8px);
+        }
+
+        /* =========================
+           รูปโปรไฟล์
+        ========================= */
+
+        .profile {
+            width: 230px;
+            height: 230px;
+
+            margin: 0 auto 30px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 8px solid white;
+
+            box-shadow:
+                0 8px 25px rgba(91, 70, 150, 0.25);
+        }
+
+        /* =========================
+           ข้อมูล
+        ========================= */
+
+        .name {
+            font-size: 38px;
+            font-weight: bold;
+
+            margin-bottom: 18px;
+
+            background: linear-gradient(
+                90deg,
+                #7549a8,
+                #4b8fce
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info {
+            font-size: 21px;
+
+            line-height: 2;
+
+            color: #57466e;
+
+            margin-bottom: 25px;
+        }
+
+        .info strong {
+            color: #66449a;
+        }
+
+        /* =========================
+           ข้อความแนะนำ
+        ========================= */
+
+        .welcome {
+            font-size: 18px;
+
+            color: #6a5b7c;
+
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           ปุ่ม
+        ========================= */
+
+        .button {
+            display: inline-block;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            padding: 14px 32px;
+
+            border-radius: 30px;
+
+            background: linear-gradient(
+                90deg,
+                #7951b3,
+                #5799d5
+            );
+
+            box-shadow:
+                0 7px 18px rgba(91, 72, 150, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 25px rgba(91, 72, 150, 0.35);
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 18px;
+
+            font-size: 14px;
+
+            color: #756783;
+
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* =========================
+           มือถือ
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+
+                padding: 6px 8px;
+
+                margin: 2px;
+            }
+
+            .home {
+                padding: 35px 15px;
+            }
+
+            .content {
+                padding: 35px 20px;
+            }
+
+            .profile {
+                width: 190px;
+                height: 190px;
+            }
+
+            .name {
+                font-size: 28px;
+            }
+
+            .info {
+                font-size: 17px;
+            }
+
+            .welcome {
+                font-size: 15px;
+            }
+
+            .button {
+                font-size: 16px;
+
+                padding: 12px 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         เมนูด้านบน
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <a href="introduction.html">
+            คำนำ
+        </a>
+
+        <a href="about.html">
+            About Me
+        </a>
+
+        <a href="university.html">
+            มหาลัย
+        </a>
+
+        <a href="portfolio.html">
+            ผลงาน/กิจกรรม
+        </a>
+
+        <a href="skills.html">
+            ทักษะ
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         หน้าแรก
+    ========================= -->
+
+    <main class="home">
+
+        <div class="content">
+
+            <!-- รูปโปรไฟล์ -->
+
+            <img
+                src="IMG_0013.jpeg"
+                alt="รูปโปรไฟล์ นายอนันทพล อุดมผล"
+                class="profile"
+            >
+
+
+            <!-- ชื่อ -->
+
+            <h1 class="name">
+                นายอนันทพล อุดมผล
+            </h1>
+
+
+            <!-- ข้อมูลการศึกษา -->
+
+            <div class="info">
+
+                <p>
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 6
+                </p>
+
+                <p>
+                    แผนการเรียน
+                    <strong>เตรียมวิศวกรรมศาสตร์</strong>
+                </p>
+
+            </div>
+
+
+            <!-- ข้อความ -->
+
+            <p class="welcome">
+                ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงานของผม
+            </p>
+
+
+            <!-- ปุ่ม -->
+
+            <a
+                href="introduction.html"
+                class="button"
+            >
+                📚🔍 เข้าดูผลงานของผม 🔎📚
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+        © 2026 นายอนันทพล อุดมผล
+    </footer>
+
+</body>
+
+</html>
