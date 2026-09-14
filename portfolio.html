@@ -1459,7 +1459,231 @@
         </section>
 
     </div>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ประวัติส่วนตัว - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #d98a3a,
+                    #777777,
+                    #444444
+                );
+
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.25);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 35px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+            border-left: 7px solid #f28c28;
+            padding-left: 14px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .profile img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid #f28c28;
+            box-shadow:
+                0 0 0 6px #999999,
+                0 7px 18px rgba(0,0,0,0.2);
+            margin: auto;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 280px;
+            background: linear-gradient(135deg, #fff7ed, #eeeeee);
+            padding: 22px;
+            border-radius: 18px;
+            border-left: 6px solid #f28c28;
+        }
+
+        .profile-info p {
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #fff4e5, #eeeeee);
+            padding: 22px;
+            border-radius: 18px;
+            margin-top: 25px;
+            border-left: 6px solid #f28c28;
+        }
+
+        .info-box h3 {
+            color: #df7200;
+            margin-bottom: 8px;
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #f28c28, #d87512, #666666);
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile-info {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>👤 ประวัติส่วนตัว</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>👤 ข้อมูลส่วนตัว</h2>
+
+    <div class="profile">
+
+        <img
+            src="IMG_0013.jpeg"
+            alt="รูปโปรไฟล์ นายอนันทพล อุดมผล"
+        >
+
+        <div class="profile-info">
+
+            <p><strong>ชื่อ :</strong> นายอนันทพล อุดมผล</p>
+
+            <p><strong>ชื่อเล่น :</strong> เป๊ก</p>
+
+            <p><strong>วันเกิด :</strong> 28 สิงหาคม 2551</p>
+
+            <p><strong>อายุ :</strong> 18 ปี</p>
+
+            <p><strong>ระดับการศึกษา :</strong> ชั้นมัธยมศึกษาปีที่ 6/5</p>
+
+            <p><strong>สายการเรียน :</strong> เตรียมวิศวกรรม</p>
+
+            <p><strong>ความสนใจ :</strong> วิศวกรรมโยธา</p>
+
+        </div>
+
+    </div>
+
+    <div class="info-box">
+
+        <h3>🎯 เป้าหมายทางการศึกษา</h3>
+
+        <p>
+            มีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
+            ด้านวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา
+            เพื่อพัฒนาความรู้และทักษะทางด้านวิศวกรรม
+            และนำความรู้ไปใช้ในการประกอบอาชีพในอนาคต
+        </p>
+
+    </div>
+
+    <div class="next">
+        <a href="university.html" class="btn">
+            หน้าถัดไป →
+        </a>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
     <!-- Footer -->
 
     <footer>
@@ -1477,3 +1701,1063 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>มหาวิทยาลัย - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f28c28, #777, #444);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 35px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+            border-left: 7px solid #f28c28;
+            padding-left: 14px;
+        }
+
+        .university {
+            background: linear-gradient(135deg, #fff4e5, #eeeeee, #d2d2d2);
+            border: 3px solid #f28c28;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .university img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 25px auto;
+        }
+
+        .university h3 {
+            color: #df7200;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .university p {
+            margin-bottom: 10px;
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #f28c28, #d87512, #666);
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ</h2>
+
+    <div class="university">
+
+        <img
+            src="1280px-Seal_of_King_Mongkut's_Institute_of_Technology_Ladkrabang.svg.png"
+            alt="ตราสัญลักษณ์สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"
+        >
+
+        <h3>
+            🏫 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        </h3>
+
+        <p>
+            <strong>คณะวิศวกรรมศาสตร์</strong>
+        </p>
+
+        <p>
+            <strong>สาขาวิศวกรรมโยธา</strong>
+        </p>
+
+        <br>
+
+        <p><strong>เหตุผลที่สนใจ :</strong></p>
+
+        <p>
+            มีความสนใจในด้านวิศวกรรมโยธา
+            และต้องการศึกษาต่อในสถาบันที่มีความรู้
+            และความเชี่ยวชาญด้านวิศวกรรม
+            เพื่อพัฒนาตนเองให้มีความรู้และทักษะ
+            พร้อมสำหรับการประกอบอาชีพในอนาคต
+        </p>
+
+        <br>
+
+        <p><strong>เป้าหมาย :</strong></p>
+
+        <p>
+            ต้องการพัฒนาความรู้ด้านวิศวกรรมโยธา
+            ทั้งภาคทฤษฎีและภาคปฏิบัติ
+            รวมถึงนำความรู้ไปประยุกต์ใช้ในการทำงานจริง
+        </p>
+
+    </div>
+    <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>มหาวิทยาลัย - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f28c28, #777, #444);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 35px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+            border-left: 7px solid #f28c28;
+            padding-left: 14px;
+        }
+
+        .university {
+            background: linear-gradient(135deg, #fff4e5, #eeeeee, #d2d2d2);
+            border: 3px solid #f28c28;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .university img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 25px auto;
+        }
+
+        .university h3 {
+            color: #df7200;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .university p {
+            margin-bottom: 10px;
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #f28c28, #d87512, #666);
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ</h2>
+
+    <div class="university">
+
+        <img
+            src="1280px-Seal_of_King_Mongkut's_Institute_of_Technology_Ladkrabang.svg.png"
+            alt="ตราสัญลักษณ์สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"
+        >
+
+        <h3>
+            🏫 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        </h3>
+
+        <p>
+            <strong>คณะวิศวกรรมศาสตร์</strong>
+        </p>
+
+        <p>
+            <strong>สาขาวิศวกรรมโยธา</strong>
+        </p>
+
+        <br>
+
+        <p><strong>เหตุผลที่สนใจ :</strong></p>
+
+        <p>
+            มีความสนใจในด้านวิศวกรรมโยธา
+            และต้องการศึกษาต่อในสถาบันที่มีความรู้
+            และความเชี่ยวชาญด้านวิศวกรรม
+            เพื่อพัฒนาตนเองให้มีความรู้และทักษะ
+            พร้อมสำหรับการประกอบอาชีพในอนาคต
+        </p>
+
+        <br>
+
+        <p><strong>เป้าหมาย :</strong></p>
+
+        <p>
+            ต้องการพัฒนาความรู้ด้านวิศวกรรมโยธา
+            ทั้งภาคทฤษฎีและภาคปฏิบัติ
+            รวมถึงนำความรู้ไปประยุกต์ใช้ในการทำงานจริง
+        </p>
+
+    </div>
+
+    <div class="next">
+        <a href="portfolio.html" class="btn">
+            หน้าถัดไป →
+        </a>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
+
+    <div class="next">
+        <a href="portfolio.html" class="btn">
+            หน้าถัดไป →
+        </a>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ผลงาน - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f28c28, #777, #444);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 32px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+            border-left: 7px solid #f28c28;
+            padding-left: 14px;
+        }
+
+        .project {
+            background: linear-gradient(135deg, #fff8f0, #eeeeee, #d9d9d9);
+            border: 2px solid #f5a65b;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            color: #df7200;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            margin-bottom: 10px;
+        }
+
+        .project ul {
+            margin: 10px 0 0 25px;
+        }
+
+        .project li {
+            margin-bottom: 7px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 22px auto;
+            border-radius: 15px;
+            border: 4px solid #f28c28;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #f28c28, #d87512, #666);
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+
+            .project {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏆 ผลงานและกิจกรรม</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>🏆 ผลงานและกิจกรรม</h2>
+
+    <!-- ผลงานที่ 1 -->
+    <div class="project">
+
+        <h3>
+            🏗️ ผลงานที่ 1 :
+            HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
+        </h3>
+
+        <p>
+            <strong>ชื่อผลงาน :</strong>
+            HIGH CALIBER ENGINEERING COMPETENCY TEST 2026
+        </p>
+
+        <p>
+            <strong>รายละเอียด :</strong>
+            เข้าร่วมการทดสอบความรู้และสมรรถนะทางวิศวกรรม
+            จัดโดย School of Engineering, KMITL
+            และได้รับการประเมินในระดับ
+            <strong>EMERGING CALIBER</strong>
+        </p>
+
+        <p>
+            <strong>วันที่ :</strong>
+            31 สิงหาคม 2569
+        </p>
+
+        <img
+            src="IMG_0016.jpeg"
+            alt="เกียรติบัตร HIGH CALIBER ENGINEERING COMPETENCY TEST 2026"
+        >
+
+        <p><strong>🎯 ทักษะที่ได้รับ :</strong></p>
+
+        <ul>
+            <li>การคิดวิเคราะห์และการแก้โจทย์ปัญหา</li>
+            <li>การประยุกต์ใช้ความรู้ด้านวิศวกรรม</li>
+            <li>การคิดอย่างเป็นระบบภายใต้เวลาที่กำหนด</li>
+            <li>การประเมินและพัฒนาความรู้ของตนเอง</li>
+        </ul>
+
+    </div>
+
+    <!-- ผลงานที่ 2 -->
+    <div class="project">
+
+        <h3>
+            🏢 ผลงานที่ 2 :
+            Workshop การทดสอบวัสดุวิศวกรรมโยธา
+        </h3>
+
+        <p>
+            <strong>ชื่อผลงาน :</strong>
+            Workshop การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+        </p>
+
+        <p>
+            <strong>รายละเอียด :</strong>
+            เข้าร่วมกิจกรรม Workshop
+            “การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]”
+            ในงาน K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
+            จัดโดย School of Engineering, KMITL
+        </p>
+
+        <p>
+            <strong>วันที่ :</strong>
+            5 กรกฎาคม 2569
+        </p>
+
+        <img
+            src="IMG_0015.jpeg"
+            alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+        >
+
+        <p><strong>🎯 ทักษะที่ได้รับ :</strong></p>
+
+        <ul>
+            <li>ความรู้พื้นฐานเกี่ยวกับวัสดุที่ใช้ในงานวิศวกรรมโยธา</li>
+            <li>การเรียนรู้กระบวนการทดสอบวัสดุ</li>
+            <li>การสังเกตและวิเคราะห์คุณสมบัติของวัสดุ</li>
+            <li>ความเข้าใจความสำคัญของวัสดุต่อความแข็งแรงและความปลอดภัยของงานก่อสร้าง</li>
+        </ul>
+
+    </div>
+
+    <!-- ผลงานที่ 3 -->
+    <div class="project">
+
+        <h3>
+            📜 ผลงานที่ 3 :
+            Mini Startup Camp
+        </h3>
+
+        <p>
+            <strong>ชื่อผลงาน :</strong>
+            Workshop Mini Startup Camp [Non-EE]
+        </p>
+
+        <p>
+            <strong>รายละเอียด :</strong>
+            เข้าร่วมกิจกรรม Workshop
+            “Mini Startup Camp [Non-EE]”
+            ในงาน K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
+            จัดโดย School of Engineering, KMITL
+        </p>
+
+        <p>
+            <strong>วันที่ :</strong>
+            5 กรกฎาคม 2569
+        </p>
+
+        <img
+            src="IMG_0014.jpeg"
+            alt="เกียรติบัตร Mini Startup Camp"
+        >
+
+        <p><strong>🎯 ทักษะที่ได้รับ :</strong></p>
+
+        <ul>
+            <li>การคิดสร้างสรรค์และการพัฒนาแนวคิด</li>
+            <li>การคิดวิเคราะห์เพื่อแก้ไขปัญหา</li>
+            <li>การวางแผนและพัฒนาแนวคิดให้เป็นรูปธรรม</li>
+            <li>การนำเสนอและการสื่อสารแนวคิด</li>
+            <li>การทำงานร่วมกับผู้อื่น</li>
+        </ul>
+
+    </div>
+
+    <!-- ผลงานที่ 4 -->
+    <div class="project">
+
+        <h3>
+            👷 ผลงานที่ 4 :
+            นักเรียนจิตอาสา BBU JOB FAIR
+        </h3>
+
+        <p>
+            <strong>ประเภท :</strong>
+            กิจกรรมจิตอาสา
+        </p>
+
+        <p>
+            <strong>ชื่อผลงาน :</strong>
+            นักเรียนจิตอาสาในงานเปิดบ้านวิชาการ “BBU JOB FAIR”
+        </p>
+
+        <p>
+            <strong>รายละเอียด :</strong>
+            เข้าร่วมเป็นนักเรียนจิตอาสา
+            ในงานเปิดบ้านวิชาการ “BBU JOB FAIR”
+            เพื่อช่วยสนับสนุนการดำเนินงานของกิจกรรมภายในโรงเรียน
+        </p>
+
+        <p>
+            <strong>วันที่ :</strong>
+            29 มกราคม 2569
+        </p>
+
+        <img
+            src="IMG_0017.jpeg"
+            alt="เกียรติบัตรนักเรียนจิตอาสา BBU JOB FAIR"
+        >
+
+        <p><strong>🎯 ทักษะที่ได้รับ :</strong></p>
+
+        <ul>
+            <li>ความรับผิดชอบต่อหน้าที่</li>
+            <li>การทำงานเป็นทีม</li>
+            <li>การสื่อสารและประสานงานกับผู้อื่น</li>
+            <li>การมีจิตอาสาและการช่วยเหลือส่วนรวม</li>
+            <li>การแก้ไขสถานการณ์เฉพาะหน้า</li>
+        </ul>
+
+    </div>
+
+    <div class="next">
+        <a href="skills.html" class="btn">
+            หน้าถัดไป →
+        </a>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ทักษะและความสามารถ - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f28c28, #777, #444);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 35px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+            border-left: 7px solid #f28c28;
+            padding-left: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #d87512,
+                    #666666
+                );
+
+            color: white;
+            padding: 12px 20px;
+            border-radius: 22px;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #f28c28, #d87512, #666);
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 25px 20px;
+            }
+
+            .skill {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>💡 ทักษะและความสามารถ</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>💡 ทักษะและความสามารถโดยรวม</h2>
+
+    <div class="skills">
+
+        <span class="skill">
+            🧠 การคิดวิเคราะห์
+        </span>
+
+        <span class="skill">
+            🏗️ ความสนใจด้านวิศวกรรมโยธา
+        </span>
+
+        <span class="skill">
+            🔬 ความรู้พื้นฐานด้านวัสดุวิศวกรรมโยธา
+        </span>
+
+        <span class="skill">
+            💡 การคิดสร้างสรรค์
+        </span>
+
+        <span class="skill">
+            🤝 การทำงานเป็นทีม
+        </span>
+
+        <span class="skill">
+            📢 การสื่อสาร
+        </span>
+
+        <span class="skill">
+            🎯 ความรับผิดชอบ
+        </span>
+
+        <span class="skill">
+            ❤️ จิตอาสา
+        </span>
+
+    </div>
+
+    <div class="next">
+        <a href="thanks.html" class="btn">
+            หน้าถัดไป →
+        </a>
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ขอบคุณ - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
+            color: #444;
+            line-height: 1.8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f28c28,
+                    #f5a65b,
+                    #c9c9c9,
+                    #777777,
+                    #444444
+                );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f28c28, #777, #444);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        section {
+            background: rgba(255,255,255,0.97);
+            padding: 45px;
+            border-radius: 22px;
+            border: 2px solid rgba(242,140,40,0.45);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h2 {
+            color: #df7200;
+            margin-bottom: 25px;
+        }
+
+        section p {
+            margin-bottom: 18px;
+        }
+
+        .finish {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #fff4e5, #eeeeee);
+            border-left: 6px solid #f28c28;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #444, #666, #d87512, #f28c28);
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🙏 ขอบคุณ</h1>
+</header>
+
+<div class="container">
+
+<section>
+
+    <h2>🙏 ขอบคุณที่เข้าชม Portfolio</h2>
+
+    <p>
+        ขอขอบคุณทุกท่านที่เข้ามาเยี่ยมชม
+        แฟ้มสะสมผลงาน (Portfolio) ของข้าพเจ้า
+    </p>
+
+    <p>
+        ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานนี้
+        จะช่วยแสดงให้เห็นถึงความตั้งใจ
+        ความสนใจ ความสามารถ
+        และประสบการณ์ที่ได้สั่งสมมา
+    </p>
+
+    <div class="finish">
+
+        <p>
+            ข้าพเจ้าพร้อมที่จะเรียนรู้
+            และพัฒนาตนเองต่อไปในอนาคต
+        </p>
+
+        <p>
+            🏗️ <strong>Civil Engineering | KMITL</strong>
+        </p>
+
+        <p>
+            ✨ ขอบคุณครับ ✨
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 Portfolio ของ นายอนันทพล อุดมผล</p>
+</footer>
+
+</body>
+</html>
+
