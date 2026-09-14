@@ -1,1015 +1,1323 @@
-<!DOCTYPE html>
-<html lang="th">
+<!DOCTYPE html>  <html lang="th">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Portfolio - นายอนันทพล อุดมผล</title>  
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>  
 
-    <title>Portfolio - นายอนันทพล อุดมผล</title>
+    * {  
+        box-sizing: border-box;  
+        margin: 0;  
+        padding: 0;  
+    }  
 
-    <style>
+    html {  
+        scroll-behavior: smooth;  
+    }  
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    body {  
+        font-family:  
+            Arial,  
+            "Noto Sans Thai",  
+            "Tahoma",  
+            sans-serif;  
 
-        html {
-            scroll-behavior: smooth;
-        }
+        color: #444;  
 
-        body {
-            font-family:
-                Arial,
-                "Noto Sans Thai",
-                Tahoma,
-                sans-serif;
+        line-height: 1.8;  
 
-            color: #444;
-            line-height: 1.8;
+        background:  
+            linear-gradient(  
+                135deg,  
+                #f28c28 0%,  
+                #f5a65b 25%,  
+                #c9c9c9 55%,  
+                #777777 80%,  
+                #444444 100%  
+            );  
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f28c28 0%,
-                    #f5a65b 25%,
-                    #c9c9c9 55%,
-                    #777777 80%,
-                    #444444 100%
-                );
+        background-attachment: fixed;  
+    }  
 
-            background-attachment: fixed;
-        }
 
+    /* =========================  
+       Navigation  
+    ========================= */  
 
-        /* =========================
-           Navigation
-        ========================= */
+    nav {  
 
-        nav {
-            background:
-                linear-gradient(
-                    90deg,
-                    #e87500,
-                    #f28c28,
-                    #999999,
-                    #555555
-                );
+        background:  
+            linear-gradient(  
+                90deg,  
+                #e87500,  
+                #f28c28,  
+                #999999,  
+                #555555  
+            );  
 
-            padding: 15px 20px;
+        padding: 15px 20px;  
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        position: sticky;  
 
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.25);
-        }
+        top: 0;  
 
-        nav ul {
-            list-style: none;
+        z-index: 1000;  
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        box-shadow:  
+            0 4px 15px rgba(0,0,0,0.25);  
+    }  
 
-            flex-wrap: wrap;
-            gap: 10px;
-        }
 
-        nav ul li a {
-            text-decoration: none;
+    nav ul {  
 
-            color: white;
-            font-weight: bold;
+        list-style: none;  
 
-            display: inline-block;
+        display: flex;  
 
-            padding: 9px 16px;
+        justify-content: center;  
 
-            border-radius: 25px;
+        align-items: center;  
 
-            transition: 0.3s;
+        flex-wrap: wrap;  
 
-            border:
-                1px solid rgba(255,255,255,0.4);
+        gap: 10px;  
+    }  
 
-            background:
-                rgba(255,255,255,0.12);
 
-            box-shadow:
-                0 2px 6px rgba(0,0,0,0.15);
-        }
+    nav ul li a {  
 
-        nav ul li a:hover {
-            background: white;
-            color: #e87500;
+        text-decoration: none;  
 
-            transform:
-                translateY(-3px);
+        color: white;  
 
-            box-shadow:
-                0 5px 12px rgba(0,0,0,0.2);
-        }
+        font-weight: bold;  
 
+        padding: 9px 16px;  
 
-        /* =========================
-           Header
-        ========================= */
+        border-radius: 25px;  
 
-        header {
-            background:
-                linear-gradient(
-                    135deg,
-                    #f28c28,
-                    #d98a3a,
-                    #777777,
-                    #444444
-                );
+        transition: 0.3s;  
 
-            color: white;
+        border: 1px solid rgba(255,255,255,0.4);  
 
-            text-align: center;
+        background:  
+            rgba(255,255,255,0.12);  
 
-            padding: 70px 20px;
+        box-shadow:  
+            0 2px 6px rgba(0,0,0,0.15);  
+    }  
 
-            box-shadow:
-                0 7px 20px rgba(0,0,0,0.25);
 
-            border-bottom:
-                5px solid #f5a65b;
-        }
+    nav ul li a:hover {  
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+        background: white;  
 
-            text-shadow:
-                2px 3px 6px rgba(0,0,0,0.35);
-        }
+        color: #e87500;  
 
-        header p {
-            font-size: 1.15rem;
-            margin: 5px;
-        }
+        transform:  
+            translateY(-3px);  
 
+        box-shadow:  
+            0 5px 12px rgba(0,0,0,0.2);  
+    }  
 
-        /* =========================
-           Container
-        ========================= */
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
+    /* =========================  
+       Header  
+    ========================= */  
 
-            margin: 45px auto;
-        }
+    header {  
 
+        background:  
+            linear-gradient(  
+                135deg,  
+                #f28c28,  
+                #d98a3a,  
+                #777777,  
+                #444444  
+            );  
 
-        /* =========================
-           Main Sections
-        ========================= */
+        color: white;  
 
-        section {
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.98),
-                    rgba(245,245,245,0.96)
-                );
+        text-align: center;  
 
-            margin-bottom: 40px;
+        padding: 70px 20px;  
 
-            padding: 32px;
+        box-shadow:  
+            0 7px 20px rgba(0,0,0,0.25);  
 
-            border-radius: 22px;
+        border-bottom:  
+            5px solid #f5a65b;  
+    }  
 
-            border:
-                2px solid rgba(242,140,40,0.45);
 
-            box-shadow:
-                0 7px 20px rgba(0,0,0,0.15);
-        }
+    header h1 {  
 
-        section h2 {
-            color: #df7200;
+        font-size: 2.5rem;  
 
-            margin-bottom: 25px;
+        margin-bottom: 12px;  
 
-            border-left:
-                7px solid #f28c28;
+        text-shadow:  
+            2px 3px 6px rgba(0,0,0,0.35);  
+    }  
 
-            padding-left: 14px;
 
-            text-shadow:
-                1px 1px 1px rgba(0,0,0,0.08);
-        }
+    header p {  
 
+        font-size: 1.15rem;  
 
-        /* =========================
-           Paragraph Spacing
-        ========================= */
+        margin: 5px;  
+    }  
 
-        section > p {
-            margin-bottom: 18px;
-        }
 
+    /* =========================  
+       Container  
+    ========================= */  
 
-        /* =========================
-           Profile
-        ========================= */
+    .container {  
 
-        .profile {
-            display: flex;
+        width: 90%;  
 
-            align-items: center;
+        max-width: 1100px;  
 
-            gap: 35px;
+        margin: 40px auto;  
+    }  
 
-            flex-wrap: wrap;
-        }
 
-        .profile img {
-            width: 220px;
-            height: 220px;
+    /* =========================  
+       Section  
+    ========================= */  
 
-            object-fit: cover;
+    section {  
 
-            border-radius: 50%;
+        background:  
+            linear-gradient(  
+                135deg,  
+                rgba(255,255,255,0.98),  
+                rgba(245,245,245,0.96)  
+            );  
 
-            border:
-                7px solid #f28c28;
+        margin-bottom: 35px;  
 
-            display: block;
+        padding: 32px;  
 
-            margin: auto;
+        border-radius: 22px;  
 
-            box-shadow:
-                0 0 0 6px #999999,
-                0 7px 18px rgba(0,0,0,0.2);
-        }
+        border:  
+            2px solid rgba(242,140,40,0.45);  
 
-        .profile-info {
-            flex: 1;
+        box-shadow:  
+            0 7px 20px rgba(0,0,0,0.15);  
+    }  
 
-            min-width: 280px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff7ed,
-                    #eeeeee
-                );
+    section h2 {  
 
-            padding: 22px;
+        color: #df7200;  
 
-            border-radius: 18px;
+        margin-bottom: 22px;  
 
-            border-left:
-                6px solid #f28c28;
+        border-left:  
+            7px solid #f28c28;  
 
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
+        padding-left: 14px;  
 
-        .profile-info p {
-            margin-bottom: 10px;
-        }
+        text-shadow:  
+            1px 1px 1px rgba(0,0,0,0.08);  
+    }  
 
 
-        /* =========================
-           Info Box
-        ========================= */
+    /* =========================  
+       Profile  
+    ========================= */  
 
-        .info-box {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff4e5,
-                    #eeeeee
-                );
+    .profile {  
 
-            padding: 22px;
+        display: flex;  
 
-            border-radius: 18px;
+        align-items: center;  
 
-            margin-top: 28px;
+        gap: 35px;  
 
-            border-left:
-                6px solid #f28c28;
+        flex-wrap: wrap;  
+    }  
 
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
 
-        .info-box h3 {
-            color: #df7200;
-            margin-bottom: 10px;
-        }
+    .profile img {  
 
+        width: 220px;  
 
-        /* =========================
-           Contact
-        ========================= */
+        height: 220px;  
 
-        .contact-box {
-            background:
-                linear-gradient(
-                    135deg,
-                    #f8f8f8,
-                    #e6e6e6
-                );
+        object-fit: cover;  
 
-            padding: 25px;
+        border-radius: 50%;  
 
-            border-radius: 18px;
+        border:  
+            7px solid #f28c28;  
 
-            border-left:
-                6px solid #777777;
+        display: block;  
 
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
+        margin: auto;  
 
-        .contact-box h3 {
-            color: #df7200;
-            margin-bottom: 15px;
-        }
+        box-shadow:  
+            0 0 0 6px #999999,  
+            0 7px 18px rgba(0,0,0,0.2);  
+    }  
 
-        .contact-box p {
-            margin-bottom: 10px;
-        }
 
+    .profile-info {  
 
-        /* =========================
-           University
-        ========================= */
+        flex: 1;  
 
-        .university {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff4e5,
-                    #eeeeee,
-                    #d2d2d2
-                );
+        min-width: 280px;  
 
-            border:
-                3px solid #f28c28;
+        background:  
+            linear-gradient(  
+                135deg,  
+                #fff7ed,  
+                #eeeeee  
+            );  
 
-            border-radius: 20px;
+        padding: 20px;  
 
-            padding: 30px;
+        border-radius: 18px;  
 
-            box-shadow:
-                inset 0 0 20px rgba(0,0,0,0.04);
-        }
+        border-left:  
+            6px solid #f28c28;  
+    }  
 
-        .university-logo {
-            width: 220px;
-            height: 220px;
 
-            object-fit: contain;
+    .profile-info p {  
 
-            display: block;
+        margin-bottom: 8px;  
+    }  
 
-            margin: 0 auto 25px auto;
-        }
 
-        .university h3 {
-            color: #df7200;
+    /* =========================  
+       Info boxes  
+    ========================= */  
 
-            margin-bottom: 15px;
+    .info-box {  
 
-            text-align: center;
+        background:  
+            linear-gradient(  
+                135deg,  
+                #fff4e5,  
+                #eeeeee  
+            );  
 
-            font-size: 1.35rem;
-        }
+        padding: 22px;  
 
-        .university-info {
-            background: rgba(255,255,255,0.65);
+        border-radius: 18px;  
 
-            padding: 20px;
+        margin-top: 20px;  
 
-            border-radius: 15px;
+        border-left:  
+            6px solid #f28c28;  
 
-            margin-top: 20px;
+        box-shadow:  
+            0 3px 10px rgba(0,0,0,0.08);  
+    }  
 
-            border-left:
-                5px solid #f28c28;
-        }
 
-        .university-info h4 {
-            color: #df7200;
+    .info-box h3 {  
 
-            margin-bottom: 8px;
+        color: #df7200;  
 
-            font-size: 1.1rem;
-        }
+        margin-bottom: 8px;  
+    }  
 
-        .university-info p {
-            margin-bottom: 18px;
-        }
 
+    /* =========================  
+       Contact  
+    ========================= */  
 
-        /* =========================
-           Portfolio Area
-        ========================= */
+    .contact {  
 
-        .portfolio-area {
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.98),
-                    rgba(245,245,245,0.96)
-                );
+        background:  
+            linear-gradient(  
+                135deg,  
+                #f8f8f8,  
+                #e6e6e6  
+            );  
 
-            padding: 32px;
+        padding: 22px;  
 
-            border-radius: 22px;
+        border-radius: 18px;  
 
-            border:
-                2px solid rgba(242,140,40,0.45);
+        border-left:  
+            6px solid #777777;  
 
-            box-shadow:
-                0 7px 20px rgba(0,0,0,0.15);
+        margin-top: 20px;  
+    }  
 
-            margin-bottom: 40px;
-        }
 
-        .portfolio-area > h2 {
-            color: #df7200;
+    .contact h3 {  
 
-            margin-bottom: 28px;
+        color: #df7200;  
 
-            border-left:
-                7px solid #f28c28;
+        margin-bottom: 10px;  
+    }  
 
-            padding-left: 14px;
-        }
 
+    .contact p {  
 
-        /* =========================
-           Each Project
-        ========================= */
+        margin-bottom: 8px;  
+    }  
 
-        .project {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff8f0,
-                    #eeeeee,
-                    #d9d9d9
-                );
 
-            border:
-                2px solid #f5a65b;
+    /* =========================  
+       University  
+    ========================= */  
 
-            border-radius: 20px;
+    .university {  
 
-            padding: 28px;
+        background:  
+            linear-gradient(  
+                135deg,  
+                #fff4e5,  
+                #eeeeee,  
+                #d2d2d2  
+            );  
 
-            margin-bottom: 30px;
+        border:  
+            3px solid #f28c28;  
 
-            transition: 0.3s;
+        border-radius: 20px;  
 
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.08);
-        }
+        padding: 25px;  
 
-        .project:last-child {
-            margin-bottom: 0;
-        }
+        box-shadow:  
+            inset 0 0 20px rgba(0,0,0,0.04);  
+    }  
 
-        .project:hover {
-            transform:
-                translateY(-5px);
 
-            box-shadow:
-                0 10px 22px rgba(0,0,0,0.16);
+    .university h3 {  
 
-            border-color:
-                #f28c28;
-        }
+        color: #df7200;  
 
-        .project h3 {
-            color: #df7200;
+        margin-bottom: 10px;  
+    }  
 
-            margin-bottom: 18px;
 
-            font-size: 1.3rem;
-        }
+    /* =========================  
+       Projects  
+    ========================= */  
 
-        .project p {
-            margin-bottom: 12px;
-        }
+    .project {  
 
-        .project ul {
-            margin:
-                10px 0 0 25px;
-        }
+        background:  
+            linear-gradient(  
+                135deg,  
+                #fff8f0,  
+                #eeeeee,  
+                #d9d9d9  
+            );  
 
-        .project li {
-            margin-bottom: 7px;
-        }
+        border:  
+            2px solid #f5a65b;  
 
+        border-radius: 20px;  
 
-        /* =========================
-           Project Category
-        ========================= */
+        padding: 25px;  
 
-        .project-category {
-            display: inline-block;
+        margin-bottom: 28px;  
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #f28c28,
-                    #d87512
-                );
+        transition: 0.3s;  
 
-            color: white;
+        box-shadow:  
+            0 4px 12px rgba(0,0,0,0.08);  
+    }  
 
-            padding: 7px 15px;
 
-            border-radius: 20px;
+    .project:hover {  
 
-            font-weight: bold;
+        transform:  
+            translateY(-5px);  
 
-            margin-bottom: 18px;
-        }
+        box-shadow:  
+            0 10px 22px rgba(0,0,0,0.16);  
 
+        border-color:  
+            #f28c28;  
+    }  
 
-        /* =========================
-           Project Images
-        ========================= */
 
-        .project img {
-            width: 100%;
+    .project h3 {  
 
-            max-width: 700px;
+        color: #df7200;  
 
-            display: block;
+        margin-bottom: 15px;  
 
-            margin: 25px auto;
+        font-size: 1.3rem;  
+    }  
 
-            border-radius: 15px;
 
-            border:
-                4px solid #f28c28;
+    .project p {  
 
-            box-shadow:
-                0 5px 15px rgba(0,0,0,0.18);
+        margin-bottom: 10px;  
+    }  
 
-            background:
-                #eeeeee;
 
-            transition: 0.3s;
-        }
+    .project ul {  
 
-        .project img:hover {
-            transform:
-                scale(1.015);
+        margin:  
+            10px 0 0 25px;  
+    }  
 
-            box-shadow:
-                0 8px 20px rgba(0,0,0,0.22);
-        }
 
+    .project li {  
 
-        /* =========================
-           Skills Inside Project
-        ========================= */
+        margin-bottom: 7px;  
+    }  
 
-        .project-skills {
-            background:
-                rgba(255,255,255,0.65);
 
-            padding: 18px 22px;
+    /* =========================  
+       Project Images  
+    ========================= */  
 
-            border-radius: 15px;
+    .project img {  
 
-            margin-top: 22px;
+        width: 100%;  
 
-            border-left:
-                5px solid #f28c28;
-        }
+        max-width: 700px;  
 
-        .project-skills h4 {
-            color: #df7200;
+        display: block;  
 
-            margin-bottom: 8px;
-        }
+        margin: 22px auto;  
 
+        border-radius: 15px;  
 
-        /* =========================
-           Overall Skills
-        ========================= */
+        border:  
+            4px solid #f28c28;  
 
-        .skills {
-            display: flex;
+        box-shadow:  
+            0 5px 15px rgba(0,0,0,0.18);  
 
-            flex-wrap: wrap;
+        background:  
+            #eeeeee;  
 
-            gap: 12px;
+        transition: 0.3s;  
+    }  
 
-            margin-top: 15px;
-        }
 
-        .skill {
-            background:
-                linear-gradient(
-                    135deg,
-                    #f28c28,
-                    #d87512,
-                    #666666
-                );
+    .project img:hover {  
 
-            color: white;
+        transform:  
+            scale(1.015);  
 
-            padding: 9px 17px;
+        box-shadow:  
+            0 8px 20px rgba(0,0,0,0.22);  
+    }  
 
-            border-radius: 22px;
 
-            font-weight: bold;
+    /* =========================  
+       Skills  
+    ========================= */  
 
-            box-shadow:
-                0 3px 8px rgba(0,0,0,0.15);
+    .skills {  
 
-            transition: 0.3s;
-        }
+        display: flex;  
 
-        .skill:hover {
-            transform:
-                translateY(-3px);
+        flex-wrap: wrap;  
 
-            box-shadow:
-                0 6px 12px rgba(0,0,0,0.2);
-        }
+        gap: 12px;  
 
+        margin-top: 15px;  
+    }  
 
-        /* =========================
-           Button
-        ========================= */
 
-        .btn {
-            display: inline-block;
+    .skill {  
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #f28c28,
-                    #d87512,
-                    #666666
-                );
+        background:  
+            linear-gradient(  
+                135deg,  
+                #f28c28,  
+                #d87512,  
+                #666666  
+            );  
 
-            color: white;
+        color: white;  
 
-            text-decoration: none;
+        padding: 9px 17px;  
 
-            padding: 13px 27px;
+        border-radius: 22px;  
 
-            border-radius: 28px;
+        font-weight: bold;  
 
-            font-weight: bold;
+        box-shadow:  
+            0 3px 8px rgba(0,0,0,0.15);  
 
-            transition: 0.3s;
+        transition: 0.3s;  
+    }  
 
-            box-shadow:
-                0 5px 12px rgba(0,0,0,0.2);
-        }
 
-        .btn:hover {
-            transform:
-                translateY(-3px)
-                scale(1.03);
+    .skill:hover {  
 
-            box-shadow:
-                0 8px 18px rgba(0,0,0,0.25);
-        }
+        transform:  
+            translateY(-3px);  
 
+        box-shadow:  
+            0 6px 12px rgba(0,0,0,0.2);  
+    }  
 
-        /* =========================
-           Footer
-        ========================= */
 
-        footer {
-            background:
-                linear-gradient(
-                    90deg,
-                    #444444,
-                    #666666,
-                    #d87512,
-                    #f28c28
-                );
+    /* =========================  
+       Button  
+    ========================= */  
 
-            color: white;
+    .btn {  
 
-            text-align: center;
+        display: inline-block;  
 
-            padding: 28px 15px;
+        background:  
+            linear-gradient(  
+                90deg,  
+                #f28c28,  
+                #d87512,  
+                #666666  
+            );  
 
-            margin-top: 30px;
+        color: white;  
 
-            box-shadow:
-                0 -5px 15px rgba(0,0,0,0.15);
-        }
+        text-decoration: none;  
 
-        footer p {
-            margin-bottom: 5px;
-        }
+        padding: 13px 27px;  
 
+        border-radius: 28px;  
 
-        /* =========================
-           Mobile
-        ========================= */
+        font-weight: bold;  
 
-        @media (max-width: 768px) {
+        transition: 0.3s;  
 
-            header h1 {
-                font-size: 1.8rem;
-            }
+        box-shadow:  
+            0 5px 12px rgba(0,0,0,0.2);  
+    }  
 
-            header p {
-                font-size: 1rem;
-            }
 
-            section,
-            .portfolio-area {
-                padding: 20px;
+    .btn:hover {  
 
-                border-radius: 18px;
-            }
+        transform:  
+            translateY(-3px)  
+            scale(1.03);  
 
-            .profile {
-                flex-direction: column;
+        box-shadow:  
+            0 8px 18px rgba(0,0,0,0.25);  
+    }  
 
-                text-align: center;
-            }
 
-            .profile-info {
-                min-width: 100%;
+    /* =========================  
+       Footer  
+    ========================= */  
 
-                text-align: left;
-            }
+    footer {  
 
-            nav ul {
-                gap: 5px;
-            }
+        background:  
+            linear-gradient(  
+                90deg,  
+                #444444,  
+                #666666,  
+                #d87512,  
+                #f28c28  
+            );  
 
-            nav ul li a {
-                font-size: 14px;
+        color: white;  
 
-                padding:
-                    7px 10px;
-            }
+        text-align: center;  
 
-            .project {
-                padding: 18px;
+        padding: 28px 15px;  
 
-                margin-bottom: 25px;
-            }
+        margin-top: 30px;  
 
-            .project h3 {
-                font-size: 1.1rem;
-            }
+        box-shadow:  
+            0 -5px 15px rgba(0,0,0,0.15);  
+    }  
 
-            .project img {
-                border-width: 3px;
-            }
 
-            .university {
-                padding: 20px;
-            }
+    /* =========================  
+       Mobile  
+    ========================= */  
 
-            .university-logo {
-                width: 170px;
-                height: 170px;
-            }
-        }
+    @media (max-width: 768px) {  
 
-    </style>
-</head>
+        header h1 {  
 
+            font-size:  
+                1.8rem;  
+        }  
 
-<body>
 
+        header p {  
 
-    <!-- =========================
-         Navigation
-    ========================= -->
+            font-size:  
+                1rem;  
+        }  
 
-    <nav>
 
-        <ul>
+        section {  
 
-            <li>
-                <a href="#home">
-                    🏠 หน้าแรก
-                </a>
-            </li>
+            padding:  
+                20px;  
 
-            <li>
-                <a href="#preface">
-                    📖 คำนำ
-                </a>
-            </li>
+            border-radius:  
+                18px;  
+        }  
 
-            <li>
-                <a href="#personal">
-                    👤 ประวัติส่วนตัว
-                </a>
-            </li>
 
-            <li>
-                <a href="#contact">
-                    📞 ติดต่อ
-                </a>
-            </li>
+        .profile {  
 
-            <li>
-                <a href="#university">
-                    🎓 มหาวิทยาลัย
-                </a>
-            </li>
+            flex-direction:  
+                column;  
 
-            <li>
-                <a href="#portfolio">
-                    🏆 ผลงาน
-                </a>
-            </li>
+            text-align:  
+                center;  
+        }  
 
-            <li>
-                <a href="#skills">
-                    💡 ทักษะ
-                </a>
-            </li>
 
-            <li>
-                <a href="#thanks">
-                    🙏 ขอบคุณ
-                </a>
-            </li>
+        .profile-info {  
 
-        </ul>
+            min-width:  
+                100%;  
 
-    </nav>
+            text-align:  
+                left;  
+        }  
 
 
-    <!-- =========================
-         Header
-    ========================= -->
+        nav ul {  
 
-    <header id="home">
+            gap:  
+                5px;  
+        }  
 
-        <h1>
-            ✨🏗️ แฟ้มสะสมผลงาน (Portfolio) 🏗️✨
-        </h1>
 
-        <p>
-            นายอนันทพล อุดมผล
-        </p>
+        nav ul li a {  
 
-        <p>
-            นักเรียนชั้นมัธยมศึกษาปีที่ 6/5
-        </p>
+            font-size:  
+                14px;  
 
-    </header>
+            padding:  
+                7px 10px;  
+        }  
 
 
-    <div class="container">
+        .project {  
 
+            padding:  
+                18px;  
+        }  
 
-        <!-- =========================
-             Preface
-        ========================= -->
 
-        <section id="preface">
+        .project h3 {  
 
-            <h2>
-                📖 คำนำ
-            </h2>
+            font-size:  
+                1.1rem;  
+        }  
 
-            <p>
-                แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
-                ประวัติส่วนตัว ความสนใจ ความสามารถ ผลงาน กิจกรรม
-                และประสบการณ์ต่าง ๆ ที่ได้สั่งสมมาตลอดระยะเวลาการศึกษา
-            </p>
 
-            <p>
-                ข้าพเจ้ามีความสนใจในด้านวิศวกรรมศาสตร์
-                โดยเฉพาะสาขาวิศวกรรมโยธา เนื่องจากเป็นสาขาที่เกี่ยวข้องกับ
-                การออกแบบ การก่อสร้าง และการพัฒนาโครงสร้างพื้นฐาน
-                ซึ่งเป็นสิ่งสำคัญต่อการพัฒนาประเทศ
-            </p>
+        .project img {  
 
-            <p>
-                ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
-                จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสามารถ
-                และความพร้อมในการศึกษาต่อในระดับมหาวิทยาลัย
-            </p>
+            border-width:  
+                3px;  
+        }  
+    }  
 
-        </section>
+</style>
 
+</head>  <body>  <!-- Navigation -->  
 
-        <!-- =========================
-             Personal
-        ========================= -->
+<nav>  
 
-        <section id="personal">
+    <ul>  
 
-            <h2>
-                👤 ประวัติส่วนตัว
-            </h2>
+        <li>  
+            <a href="#home">  
+                🏠 หน้าแรก  
+            </a>  
+        </li>  
 
-            <div class="profile">
+        <li>  
+            <a href="#preface">  
+                📖 คำนำ  
+            </a>  
+        </li>  
 
-                <div>
+        <li>  
+            <a href="#personal">  
+                👤 ประวัติส่วนตัว  
+            </a>  
+        </li>  
 
-                    <img
-                        src="IMG_0013.jpeg"
-                        alt="รูปโปรไฟล์ นายอนันทพล อุดมผล"
-                    >
+        <li>  
+            <a href="#university">  
+                🎓 มหาวิทยาลัย  
+            </a>  
+        </li>  
 
-                </div>
+        <li>  
+            <a href="#portfolio">  
+                🏆 ผลงาน  
+            </a>  
+        </li>  
 
+        <li>  
+            <a href="#thanks">  
+                🙏 ขอบคุณ  
+            </a>  
+        </li>  
 
-                <div class="profile-info">
+    </ul>  
 
-                    <p>
-                        <strong>ชื่อ :</strong>
-                        นายอนันทพล อุดมผล
-                    </p>
+</nav>  
 
-                    <p>
-                        <strong>ชื่อเล่น :</strong>
-                        เป๊ก
-                    </p>
 
-                    <p>
-                        <strong>วันเกิด :</strong>
-                        28 สิงหาคม 2551
-                    </p>
+<!-- Header -->  
 
-                    <p>
-                        <strong>อายุ :</strong>
-                        18 ปี
-                    </p>
+<header id="home">  
 
-                    <p>
-                        <strong>ระดับการศึกษา :</strong>
-                        ชั้นมัธยมศึกษาปีที่ 6/5
-                    </p>
+    <h1>  
+        ✨🏗️ แฟ้มสะสมผลงาน (Portfolio) 🏗️✨  
+    </h1>  
 
-                    <p>
-                        <strong>สายการเรียน :</strong>
-                        เตรียมวิศวกรรม
-                    </p>
+    <p>  
+        นายอนันทพล อุดมผล  
+    </p>  
 
-                    <p>
-                        <strong>ความสนใจ :</strong>
-                        วิศวกรรมโยธา
-                    </p>
+    <p>  
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6  
+    </p>  
 
-                </div>
+</header>  
 
-            </div>
 
+<div class="container">  
 
-            <div class="info-box">
 
-                <h3>
-                    🎯 เป้าหมายทางการศึกษา
-                </h3>
+    <!-- Preface -->  
 
-                <p>
-                    มีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
-                    ด้านวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา
-                    เพื่อพัฒนาความรู้และทักษะทางด้านวิศวกรรม
-                    และนำความรู้ไปใช้ในการประกอบอาชีพในอนาคต
-                </p>
+    <section id="preface">  
 
-            </div>
+        <h2>  
+            📖 คำนำ  
+        </h2>  
 
-        </section>
+        <p>  
 
+            แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม  
+            ประวัติส่วนตัว ความสนใจ ความสามารถ ผลงาน กิจกรรม  
+            และประสบการณ์ต่าง ๆ ที่ได้สั่งสมมาตลอดระยะเวลาการศึกษา  
 
-        <!-- =========================
-             Contact
-        ========================= -->
+        </p>  
 
-        <section id="contact">
 
-            <h2>
-                📞 ช่องทางการติดต่อ
-            </h2>
+        <p>  
 
-            <div class="contact-box">
+            ข้าพเจ้ามีความสนใจในด้านวิศวกรรมศาสตร์  
+            โดยเฉพาะสาขาวิศวกรรมโยธา เนื่องจากเป็นสาขาที่เกี่ยวข้องกับ  
+            การออกแบบ การก่อสร้าง และการพัฒนาโครงสร้างพื้นฐาน  
+            ซึ่งเป็นสิ่งสำคัญต่อการพัฒนาประเทศ  
 
-                <p>
-                    <strong>📱 โทรศัพท์ :</strong>
-                    099-393-8532
-                </p>
+        </p>  
 
-                <p>
-                    <strong>📘 Facebook :</stron
+
+        <p>  
+
+            ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้  
+            จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสามารถ  
+            และความพร้อมในการศึกษาต่อในระดับมหาวิทยาลัย  
+
+        </p>  
+
+    </section>  
+
+
+    <!-- Personal -->  
+
+    <section id="personal">  
+
+        <h2>  
+            👤 ประวัติส่วนตัว  
+        </h2>  
+
+
+        <div class="profile">  
+
+
+            <div>  
+
+                <img  
+                    src="IMG_0013.jpeg"  
+                    alt="รูปโปรไฟล์ นายอนันทพล อุดมผล"  
+                >  
+
+            </div>  
+
+
+            <div class="profile-info">  
+
+
+                <p>  
+
+                    <strong>  
+                        ชื่อ :  
+                    </strong>  
+
+                    นายอนันทพล อุดมผล  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        ชื่อเล่น :  
+                    </strong>  
+
+                    เป๊ก  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        วันเกิด :  
+                    </strong>  
+
+                    28 สิงหาคม 2551  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        อายุ :  
+                    </strong>  
+
+                    18 ปี  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        ระดับการศึกษา :  
+                    </strong>  
+
+                    ชั้นมัธยมศึกษาปีที่ 6/5  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        สายการเรียน :  
+                    </strong>  
+
+                    เตรียมวิศวกรรม  
+
+                </p>  
+
+
+                <p>  
+
+                    <strong>  
+                        ความสนใจ :  
+                    </strong>  
+
+                    วิศวกรรมโยธา  
+
+                </p>  
+
+
+            </div>  
+
+        </div>  
+
+
+        <div class="info-box">  
+
+
+            <h3>  
+                🎯 เป้าหมายทางการศึกษา  
+            </h3>  
+
+
+            <p>  
+
+                มีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย  
+                ด้านวิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา  
+                เพื่อพัฒนาความรู้และทักษะทางด้านวิศวกรรม  
+                และนำความรู้ไปใช้ในการประกอบอาชีพในอนาคต  
+
+            </p>  
+
+
+        </div>  
+
+    </section>  
+
+
+    <!-- Contact -->  
+
+    <section class="contact">  
+
+        <h2>  
+            📞 ช่องทางการติดต่อ  
+        </h2>  
+
+
+        <p>  
+
+            <strong>  
+                📱 โทรศัพท์ :  
+            </strong>  
+
+            099-393-8532  
+
+        </p>  
+
+
+        <p>  
+
+            <strong>  
+                📘 Facebook :  
+            </strong>  
+
+            Anantapol Udomphon  
+
+        </p>  
+
+
+        <p>  
+
+            <strong>  
+                📧 Gmail :  
+            </strong>  
+
+            anantapol2830@gmail.com  
+
+        </p>  
+
+    </section>  
+
+
+    <!-- University -->  
+
+    <section id="university">  
+
+        <h2>  
+            🎓 มหาวิทยาลัยที่ต้องการศึกษาต่อ  
+        </h2>  
+
+
+        <div class="university">  
+            <img  
+src="1280px-Seal_of_King_Mongkut's_Institute_of_Technology_Ladkrabang.svg.png"  
+alt="ตราสัญลักษณ์สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"  
+style="  
+    width: 220px;  
+    height: 220px;  
+    object-fit: contain;  
+    display: block;  
+    margin: 0 auto 20px auto;  
+"
+
+> 
+
+<h3>  
+
+                🏫  
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง  
+
+            </h3>  
+
+
+            <p>  
+
+                <strong>  
+                    คณะวิศวกรรมศาสตร์  
+                </strong>  
+
+            </p>  
+
+
+            <p>  
+
+                <strong>  
+                    สาขาวิศวกรรมโยธา  
+                </strong>  
+
+            </p>  
+
+
+            <br>  
+
+
+            <p>  
+
+                <strong>  
+                    เหตุผลที่สนใจ :  
+                </strong>  
+
+            </p>  
+
+
+            <p>  
+
+                มีความสนใจในด้านวิศวกรรมโยธา  
+                และต้องการศึกษาต่อในสถาบันที่มีความรู้  
+                และความเชี่ยวชาญด้านวิศวกรรม  
+                เพื่อพัฒนาตนเองให้มีความรู้และทักษะ  
+                พร้อมสำหรับการประกอบอาชีพในอนาคต  
+
+            </p>  
+
+
+            <br>  
+
+
+            <p>  
+
+                <strong>  
+                    เป้าหมาย :  
+                </strong>  
+
+            </p>  
+
+
+            <p>  
+
+                ต้องการพัฒนาความรู้ด้านวิศวกรรมโยธา  
+                ทั้งภาคทฤษฎีและภาคปฏิบัติ  
+                รวมถึงนำความรู้ไปประยุกต์ใช้ในการทำงานจริง  
+
+            </p>  
+
+
+        </div>  
+
+    </section>  
+
+
+    <!-- Portfolio -->  
+
+    <section id="portfolio">  
+
+        <h2>  
+            🏆 ผลงานและกิจกรรม  
+        </h2>  
+
+
+        <!-- Project 1 -->  
+
+        <div class="project">  
+
+
+            <h3>  
+
+                🏗️ ผลงานที่ 1 :  
+                HIGH CALIBER ENGINEERING COMPETENCY TEST 2026  
+
+            </h3>  
+
+
+            <p>  
+
+                <strong>  
+                    ชื่อผลงาน :  
+                </strong>  
+
+                HIGH CALIBER ENGINEERING COMPETENCY TEST 2026  
+
+            </p>  
+
+
+            <p>  
+
+                <strong>  
+                    รายละเอียด :  
+                </strong>  
+
+                เข้าร่วมการทดสอบความรู้และสมรรถนะทางวิศวกรรม  
+                จัดโดย School of Engineering, KMITL  
+                และได้รับการประเมินในระดับ  
+                <strong>  
+                                   </p>  
+
+
+            <p>  
+
+                <strong>  
+                    วันที่ :  
+                </strong>  
+
+                29 มกราคม 2569  
+
+            </p>  
+
+
+            <img  
+                src="IMG_0017.jpeg"  
+                alt="เกียรติบัตรนักเรียนจิตอาสา BBU JOB FAIR"  
+            >  
+
+
+            <p>  
+
+                <strong>  
+                    🎯 ทักษะที่ได้รับ :  
+                </strong>  
+
+            </p>  
+
+
+            <ul>  
+
+                <li>  
+                    ความรับผิดชอบต่อหน้าที่  
+                </li>  
+
+                <li>  
+                    การทำงานเป็นทีม  
+                </li>  
+
+                <li>  
+                    การสื่อสารและประสานงานกับผู้อื่น  
+                </li>  
+
+                <li>  
+                    การมีจิตอาสาและการช่วยเหลือส่วนรวม  
+                </li>  
+
+                <li>  
+                    การแก้ไขสถานการณ์เฉพาะหน้า  
+                </li>  
+
+            </ul>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- Overall Skills -->  
+
+    <section>  
+
+        <h2>  
+            💡 ทักษะและความสามารถโดยรวม  
+        </h2>  
+
+
+        <div class="skills">  
+
+
+            <span class="skill">  
+                🧠 การคิดวิเคราะห์  
+            </span>  
+
+
+            <span class="skill">  
+                🏗️ ความสนใจด้านวิศวกรรมโยธา  
+            </span>
+             <span class="skill">  
+                🔬 ความรู้พื้นฐานด้านวัสดุวิศวกรรมโยธา  
+            </span>  
+
+
+            <span class="skill">  
+                💡 การคิดสร้างสรรค์  
+            </span>  
+
+
+            <span class="skill">  
+                🤝 การทำงานเป็นทีม  
+            </span>  
+
+
+            <span class="skill">  
+                📢 การสื่อสาร  
+            </span>  
+
+
+            <span class="skill">  
+                🎯 ความรับผิดชอบ  
+            </span>  
+
+
+            <span class="skill">  
+                ❤️ จิตอาสา  
+            </span>  
+
+
+        </div>  
+
+    </section>  
+
+
+    <!-- Thanks -->  
+
+    <section id="thanks">  
+
+
+        <h2>  
+            🙏 ขอบคุณ  
+        </h2>  
+
+
+        <p>  
+
+            ขอขอบคุณทุกท่านที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงาน  
+            (Portfolio) ของข้าพเจ้า  
+
+        </p>  
+
+
+        <p>  
+
+            ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานนี้  
+            จะช่วยแสดงให้เห็นถึงความตั้งใจ  
+            ความสนใจ ความสามารถ  
+            และประสบการณ์ที่ได้สั่งสมมา  
+            และข้าพเจ้าพร้อมที่จะเรียนรู้  
+            และพัฒนาตนเองต่อไปในอนาคต  
+
+        </p>  
+
+
+        <br>  
+
+
+        <a href="index.html" class="btn">  
+
+            🏠 กลับหน้าแรก  
+
+        </a>  
+
+
+    </section>  
+
+</div>  
+
+
+<!-- Footer -->  
+
+<footer>  
+
+    <p>  
+        © 2026 Portfolio ของ นายอนันทพล อุดมผล  
+    </p>  
+
+    <p>  
+        🏗️ Civil Engineering | KMITL  
+    </p>  
+
+</footer>
+
+</body> 
+</html>  
