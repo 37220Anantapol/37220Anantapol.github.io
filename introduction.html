@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>คำนำ | อนันทพล อุดมผล</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Tahoma", sans-serif;
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #eee6ff,
+                #e8eaff,
+                #dff3ff
+            );
+
+            color: #4b3b60;
+
+            padding-top: 75px;
+        }
+
+        /* =====================
+           แถบเมนูด้านบน
+        ===================== */
+
+        nav {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 16px 10px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            box-shadow:
+                0 3px 15px rgba(90, 70, 150, 0.15);
+
+            z-index: 1000;
+        }
+
+        nav a {
+            display: inline-block;
+
+            text-decoration: none;
+
+            color: #60428d;
+
+            font-weight: bold;
+
+            margin: 3px 5px;
+
+            padding: 8px 12px;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+
+            background: linear-gradient(
+                90deg,
+                #7951b3,
+                #5799d5
+            );
+
+            transform: translateY(-2px);
+        }
+
+        /* =====================
+           เนื้อหา
+        ===================== */
+
+        .box {
+            width: 90%;
+
+            max-width: 850px;
+
+            margin: 50px auto;
+
+            padding: 45px;
+
+            background: rgba(255, 255, 255, 0.8);
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(90, 70, 150, 0.18);
+        }
+
+        h1 {
+            text-align: center;
+
+            color: #704ca5;
+
+            margin-bottom: 30px;
+
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            text-indent: 2em;
+
+            margin-bottom: 20px;
+        }
+
+        /* =====================
+           ปุ่มด้านล่าง
+        ===================== */
+
+        .buttons {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-top: 35px;
+
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            background: linear-gradient(
+                90deg,
+                #7951b3,
+                #5799d5
+            );
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 7px 15px rgba(90, 70, 150, 0.2);
+        }
+
+        /* =====================
+           มือถือ
+        ===================== */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding-top: 125px;
+            }
+
+            nav {
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+
+                padding: 6px 8px;
+
+                margin: 2px;
+            }
+
+            .box {
+                width: 92%;
+
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+
+                line-height: 1.8;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================
+         แถบเมนูด้านบน
+    ===================== -->
+
+    <nav>
+
+        <a href="index.html">
+            หน้าหลัก
+        </a>
+
+        <a href="introduction.html">
+            คำนำ
+        </a>
+
+        <a href="about.html">
+            About Me
+        </a>
+
+        <a href="university.html">
+            มหาลัย
+        </a>
+
+        <a href="portfolio.html">
+            ผลงาน/กิจกรรม
+        </a>
+
+        <a href="skills.html">
+            ทักษะ
+        </a>
+
+    </nav>
+
+
+    <!-- =====================
+         เนื้อหาคำนำ
+    ===================== -->
+
+    <main class="box">
+
+        <h1>
+            คำนำ
+        </h1>
+
+        <p>
+            แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวมประวัติ
+            ผลงาน กิจกรรม และประสบการณ์ต่าง ๆ ที่สะท้อนถึงความสนใจ
+            ความสามารถ และความตั้งใจของข้าพเจ้า โดยข้าพเจ้ากำลังศึกษาอยู่ใน
+            ระดับชั้นมัธยมศึกษาปีที่ 6/5 แผนการเรียนเตรียมวิศวกรรมศาสตร์
+            และมีความสนใจในด้านวิศวกรรม โดยเฉพาะวิศวกรรมโยธา
+        </p>
+
+        <p>
+            ข้าพเจ้ามีความสนใจศึกษาต่อในคณะวิศวกรรมศาสตร์
+            สาขาวิชาวิศวกรรมโยธา สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+            เนื่องจากมีความสนใจเกี่ยวกับการออกแบบ การคำนวณ การก่อสร้าง
+            และโครงสร้างต่าง ๆ ที่อยู่รอบตัว อีกทั้งยังชื่นชอบการนำความรู้
+            และแนวคิดมาพัฒนาให้เกิดเป็นผลงานที่สามารถนำไปใช้งานได้จริง
+        </p>
+
+        <p>
+            ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้จะช่วยแสดงให้เห็นถึง
+            ความตั้งใจ ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
+            รวมถึงความมุ่งมั่นในการพัฒนาตนเองเพื่อเตรียมความพร้อม
+            สำหรับการศึกษาต่อในสาขาวิศวกรรมโยธา และนำความรู้ที่ได้รับ
+            ไปประยุกต์ใช้ในการสร้างสรรค์ผลงานที่มีคุณภาพ แข็งแรง ปลอดภัย
+            และเป็นประโยชน์ต่อผู้คนและสังคมในอนาคต
+        </p>
+
+
+        <!-- =====================
+             ปุ่มย้อนกลับ / ถัดไป
+        ===================== -->
+
+        <div class="buttons">
+
+            <a
+                href="index.html"
+                class="btn"
+            >
+                ← หน้าหลัก
+            </a>
+
+            <a
+                href="about.html"
+                class="btn"
+            >
+                ถัดไป → About Me
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
