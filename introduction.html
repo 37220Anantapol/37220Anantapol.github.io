@@ -1,455 +1,109 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>คำนำ - นายอนันทพล อุดมผล</title>
-
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family:
-                Arial,
-                "Noto Sans Thai",
-                "Tahoma",
-                sans-serif;
-
-            color: #444;
-
-            line-height: 1.8;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #f28c28 0%,
-                    #f5a65b 25%,
-                    #c9c9c9 55%,
-                    #777777 80%,
-                    #444444 100%
-                );
-
-            background-attachment: fixed;
+            font-family: sans-serif;
+            color: #555555;
+            background: linear-gradient(
+                135deg,
+                #f28c28,
+                #f5b36b,
+                #d6d6d6,
+                #666666
+            );
+            min-height: 100vh;
         }
-
-        /* Navigation */
-
         nav {
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #e87500,
-                    #f28c28,
-                    #999999,
-                    #555555
-                );
-
-            padding: 15px 20px;
-
-            position: sticky;
-
-            top: 0;
-
-            z-index: 1000;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.25);
-        }
-
-        nav ul {
-
-            list-style: none;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-        }
-
-        nav ul li a {
-
-            text-decoration: none;
-
-            color: white;
-
-            font-weight: bold;
-
-            padding: 9px 16px;
-
-            border-radius: 25px;
-
-            transition: 0.3s;
-
-            border: 1px solid rgba(255,255,255,0.4);
-
-            background:
-                rgba(255,255,255,0.12);
-
-            box-shadow:
-                0 2px 6px rgba(0,0,0,0.15);
-        }
-
-        nav ul li a:hover {
-
-            background: white;
-
-            color: #e87500;
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 5px 12px rgba(0,0,0,0.2);
-        }
-
-        /* Header */
-
-        header {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #f28c28,
-                    #d98a3a,
-                    #777777,
-                    #444444
-                );
-
-            color: white;
-
+            background: rgba(255,255,255,0.95);
+            border-bottom: 5px solid #f28c28;
+            padding: 15px;
             text-align: center;
-
-            padding: 70px 20px;
-
-            box-shadow:
-                0 7px 20px rgba(0,0,0,0.25);
-
-            border-bottom:
-                5px solid #f5a65b;
         }
-
-        header h1 {
-
-            font-size: 2.5rem;
-
-            margin-bottom: 12px;
-
-            text-shadow:
-                2px 3px 6px rgba(0,0,0,0.35);
+        nav a {
+            text-decoration: none;
+            color: #e67e22;
+            font-weight: bold;
+            margin: 0 15px;
         }
-
-        header p {
-
-            font-size: 1.15rem;
-
-            margin: 5px;
-        }
-
-        /* Container */
-
         .container {
-
-            width: 90%;
-
-            max-width: 1100px;
-
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-
-        /* Section */
-
-        section {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,255,255,0.98),
-                    rgba(245,245,245,0.96)
-                );
-
-            margin-bottom: 35px;
-
-            padding: 32px;
-
-            border-radius: 22px;
-
-            border:
-                2px solid rgba(242,140,40,0.45);
-
-            box-shadow:
-                0 7px 20px rgba(0,0,0,0.15);
+        h1 {
+            text-align: center;
+            color: #e67e22;
+            margin-bottom: 30px;
         }
-
-        section h2 {
-
-            color: #df7200;
-
-            margin-bottom: 22px;
-
-            border-left:
-                7px solid #f28c28;
-
-            padding-left: 14px;
-
-            text-shadow:
-                1px 1px 1px rgba(0,0,0,0.08);
-        }
-
-        section p {
-
-            margin-bottom: 18px;
-
-            font-size: 1.05rem;
-
+        .content {
+            font-size: 18px;
+            line-height: 2;
             text-align: justify;
         }
-
-        /* Preface Box */
-
-        .preface-box {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff7ed,
-                    #eeeeee
-                );
-
-            padding: 30px;
-
-            border-radius: 18px;
-
-            border-left:
-                6px solid #f28c28;
-
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        /* Footer */
-
-        footer {
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #444444,
-                    #666666,
-                    #d87512,
-                    #f28c28
-                );
-
-            color: white;
-
-            text-align: center;
-
-            padding: 28px 15px;
-
+        .name {
+            text-align: right;
             margin-top: 30px;
-
-            box-shadow:
-                0 -5px 15px rgba(0,0,0,0.15);
+            line-height: 1.8;
         }
-
-        /* Mobile */
-
-        @media (max-width: 768px) {
-
-            header h1 {
-
-                font-size: 1.8rem;
-            }
-
-            header p {
-
-                font-size: 1rem;
-            }
-
-            section {
-
-                padding: 20px;
-
-                border-radius: 18px;
-            }
-
-            nav ul {
-
-                gap: 5px;
-            }
-
-            nav ul li a {
-
-                font-size: 14px;
-
-                padding: 7px 10px;
-            }
-
-            .preface-box {
-
-                padding: 20px;
-            }
-
-            section p {
-
-                font-size: 1rem;
-            }
-
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: white;
         }
-
     </style>
-
 </head>
-
 <body>
-
-    <!-- Navigation -->
-
     <nav>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    🏠 หน้าแรก
-                </a>
-            </li>
-
-            <li>
-                <a href="introduction.html">
-                    📖 คำนำ
-                </a>
-            </li>
-
-            <li>
-                <a href="about.html">
-                    👤 ประวัติส่วนตัว
-                </a>
-            </li>
-
-            <li>
-                <a href="university.html">
-                    🎓 มหาวิทยาลัย
-                </a>
-            </li>
-
-            <li>
-                <a href="portfolio.html">
-                    🏆 ผลงาน
-                </a>
-            </li>
-
-            <li>
-                <a href="skills.html">
-                    💡 ทักษะ
-                </a>
-            </li>
-
-            <li>
-                <a href="contact.html">
-                    📞 ติดต่อ
-                </a>
-            </li>
-
-        </ul>
-
+        <a href="index.html">หน้าหลัก</a>
+        <a href="preface.html">คำนำ</a>
+        <a href="profile.html">ประวัติส่วนตัว</a>
+        <a href="education.html">การศึกษา</a>
+        <a href="works.html">ผลงาน</a>
+        <a href="activities.html">กิจกรรม</a>
+        <a href="skills.html">ความสามารถ</a>
     </nav>
-
-
-    <!-- Header -->
-
-    <header>
-
-        <h1>
-            📖 คำนำ
-        </h1>
-
-        <p>
-            แฟ้มสะสมผลงาน (Portfolio)
-        </p>
-
-        <p>
-            นายอนันทพล อุดมผล
-        </p>
-
-    </header>
-
-
     <div class="container">
-
-        <!-- Preface -->
-
-        <section>
-
-            <h2>
-                📖 คำนำ
-            </h2>
-
-            <div class="preface-box">
-
-                <p>
-
-                    แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
-                    ประวัติส่วนตัว ความสนใจ ความสามารถ ผลงาน กิจกรรม
-                    และประสบการณ์ต่าง ๆ ที่ได้สั่งสมมาตลอดระยะเวลาการศึกษา
-
-                </p>
-
-                <p>
-
-                    ข้าพเจ้ามีความสนใจในด้านวิศวกรรมศาสตร์
-                    โดยเฉพาะสาขาวิศวกรรมโยธา เนื่องจากเป็นสาขาที่เกี่ยวข้องกับ
-                    การออกแบบ การก่อสร้าง และการพัฒนาโครงสร้างพื้นฐาน
-                    ซึ่งเป็นสิ่งสำคัญต่อการพัฒนาประเทศ
-
-                </p>
-
-                <p>
-
-                    ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
-                    จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสามารถ
-                    และความพร้อมในการศึกษาต่อในระดับมหาวิทยาลัย
-
-                </p>
-
+        <h1>คำนำ</h1>
+        <div class="content">
+            <p>
+                เว็บไซต์ Portfolio ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+                ประวัติการศึกษา ผลงาน กิจกรรม และความสามารถของ
+                นายอนันทพล อุดมผล เพื่อใช้เป็นข้อมูลสำหรับนำเสนอ
+                ตัวตน ความสนใจ และประสบการณ์ที่ได้สั่งสมมา
+            </p>
+            <br>
+            <p>
+                ภายในเว็บไซต์ประกอบด้วยข้อมูลที่แสดงถึงความรู้
+                ความสามารถ และผลงานต่าง ๆ ที่ได้เรียนรู้และพัฒนาขึ้น
+                โดยมีจุดประสงค์เพื่อให้ผู้ที่เข้าชมเว็บไซต์สามารถ
+                ทำความรู้จักและเห็นถึงความตั้งใจในการศึกษาและพัฒนาตนเอง
+            </p>
+            <br>
+            <p>
+                ผู้จัดทำหวังเป็นอย่างยิ่งว่า Portfolio ฉบับนี้จะเป็นประโยชน์
+                และช่วยนำเสนอข้อมูลเกี่ยวกับผู้จัดทำได้อย่างชัดเจน
+            </p>
+            <div class="name">
+                <p>นายอนันทพล อุดมผล</p>
+                <p>ผู้จัดทำ</p>
             </div>
-
-        </section>
-
+        </div>
     </div>
-
-
-    <!-- Footer -->
-
     <footer>
-
-        <p>
-            © 2026 Portfolio ของ นายอนันทพล อุดมผล
-        </p>
-
-        <p>
-            🏗️ Civil Engineering | KMITL
-        </p>
-
+        © 2026 Portfolio - นายอนันทพล อุดมผล
     </footer>
-
 </body>
-
 </html>
